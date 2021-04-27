@@ -20,6 +20,7 @@
 
 #content_wrap > .main_content > .current_ex > .ex_tit {
     padding-top: 20px;
+    margin: 0 auto;
 }
 
 #content_wrap > .main_content > .current_ex > .ex_tit > h2 {
@@ -32,14 +33,13 @@
 
 /* 예정된 전시 */
 #content_wrap > .sub_content {
-    margin: 30px auto;
     width: 100%;
+    margin: 30px auto;
 }
 
 #content_wrap > .sub_content > .upcoming_ex {
     width: 1024px;
     margin: 0 auto;
-    height: 200px;
     overflow: hidden;
 }
 
@@ -79,13 +79,75 @@
 
 /* 미디어 쿼리 */
 @media screen and (max-width: 767px) {
+    #content_wrap > .main_content > .current_ex {
+        width: 90vw;
+    }
 
+    #content_wrap > .main_content > .current_ex > .ex_tit {
+        width: 90vw;
+    }
+
+    #content_wrap > .sub_content > .upcoming_ex {
+        width: 90vw;
+        height: auto;
+    }
+
+    #content_wrap > .sub_content > .upcoming_ex > .ex_tit {
+        float: none;
+        width: 80vw;
+        margin: 30px auto;
+    }
+    
+    #content_wrap > .sub_content > .upcoming_ex > .ex_tit > h2 {
+        text-align: center;
+    }
+    
+    #content_wrap > .sub_content > .upcoming_ex > .ex_plan {
+        float: none;
+        width: 80vw;
+        margin: 30px auto;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+    #content_wrap > .main_content > .current_ex {
+        width: 90vw;
+    }
+
+    #content_wrap > .main_content > .current_ex > .ex_tit {
+        width: 90vw;
+    }
+
+    #content_wrap > .sub_content > .upcoming_ex {
+        width: 90vw;
+        height: auto;
+    }
+
+    #content_wrap > .sub_content > .upcoming_ex > .ex_tit {
+        float: left;
+        width: 40vw;
+        margin: 30px 20px;
+    }
+    
+    #content_wrap > .sub_content > .upcoming_ex > .ex_tit > h2 {
+        text-align: right;
+    }
+    
+    #content_wrap > .sub_content > .upcoming_ex > .ex_plan {
+        float: left;
+        width: 40vw;
+        margin: 30px 10px;
+    }
 
 }
     
 @media screen and (min-width: 1024px) {
-    
+    #content_wrap > .main_content > .current_ex {
+        width: 1024px;
+    }
+
+    #content_wrap > .sub_content > .upcoming_ex {
+        width: 1024px;
+        height: 200px;
+    }
 }

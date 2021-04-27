@@ -57,13 +57,19 @@
 
 /* 미디어 쿼리 */
 @media screen and (max-width: 767px) {
-
+    .video_container > .history {
+        width: 90vw;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-
+    .video_container > .history {
+        width: 90vw;
+    }
 }
     
 @media screen and (min-width: 1024px) {
-    
+    .video_container > .history {
+        width: 1024px;
+    }
 }
