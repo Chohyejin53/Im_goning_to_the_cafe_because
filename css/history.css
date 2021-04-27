@@ -24,7 +24,7 @@
 }
 
 .history > .history_txt .boxs {
-    margin-top: 30px;
+    margin: 30px 10px 0px 10px;
 }
 
 .history > .history_txt .box_1 h2, .history > .history_txt .box_4 h2 {
