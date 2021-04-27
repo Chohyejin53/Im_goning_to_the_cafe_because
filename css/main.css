@@ -128,8 +128,10 @@
     }
 
     .intro_wrap > .message .message_txt h2 {
-        width: 100vw;
+        width: 80vw;
+        margin: 0 auto;
     }
+
     .intro_wrap > .message .message_txt p {
         width: 80vw;
         margin: 0 auto;
@@ -167,6 +169,12 @@
         float: none;
         width: 80vw;
     }
+
+    .intro_wrap > .message .message_txt h2 {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
     .intro_wrap > .message .message_img {
         float: none;
         width: 50vw;

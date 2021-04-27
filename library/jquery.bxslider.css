@@ -92,6 +92,7 @@ ul.bxslider {
 .bx-wrapper .bx-prev {
   left: 10px;
   background: url('../images/angle-left-solid.svg') no-repeat 0 -32px;
+  z-index: 99;
 }
 .bx-wrapper .bx-prev:hover,
 .bx-wrapper .bx-prev:focus {
@@ -100,6 +101,7 @@ ul.bxslider {
 .bx-wrapper .bx-next {
   right: 10px;
   background: url('../images/angle-right-solid.svg') no-repeat -43px -32px;
+  z-index: 99;
 }
 .bx-wrapper .bx-next:hover,
 .bx-wrapper .bx-next:focus {
