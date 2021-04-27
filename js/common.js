@@ -13,6 +13,7 @@
                 $("#footer_wrap").hide();
                 $(".main_header").css({"background-color":"#f4f5f9"});
 
+
                 $(".mobile_menu").show();
 
             } else { /*닫기 메뉴 버튼이 보일때*/

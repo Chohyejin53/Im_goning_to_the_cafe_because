@@ -117,7 +117,6 @@
         line-height: 100px;
     }
 
-
     /* 소개 */
     .intro_wrap > .message {   
         width: 90vw;
@@ -132,7 +131,8 @@
         width: 100vw;
     }
     .intro_wrap > .message .message_txt p {
-        width: 100vw;
+        width: 80vw;
+        margin: 0 auto;
     }
 
     .intro_wrap > .message .message_img {
@@ -165,7 +165,7 @@
 
     .intro_wrap > .message .message_txt {
         float: none;
-        width: 90vw;
+        width: 80vw;
     }
     .intro_wrap > .message .message_img {
         float: none;

@@ -54,10 +54,12 @@
     width: 100%;
     background: #f4f5f9;
     margin: 50px auto;
+    padding: 10px;
     
 }
 
 .main_content > .notice > h2 {
+    width: 90%;
     font-family: 'Bree Serif', serif;
     font-size: 1.5em;
     text-align: center;
@@ -65,10 +67,13 @@
 }
 
 .main_content > .notice > p {
+    width: 90%;
+    margin: 0 auto;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3em;
     text-align: center;
     margin-bottom: 10px;
+    
 
 }
 
@@ -96,7 +101,7 @@
 .main_content > .tickets > .right {
     float: left;
     width: 70%;
-    margin: 20px auto;
+    margin: 30px auto;
 }
 
 .main_content > .tickets > .right li {
@@ -184,17 +189,125 @@
 
 /* 미디어 쿼리 */
 @media screen and (max-width: 767px) {
+    #content_wrap > .main_content {
+        width: 90vw;
+    }
+
+    .main_content > .date {
+        width: 90vw;
+    }
+
+    .main_content > .notice {
+        float: none;
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* 티켓가격 */
+    .main_content > .tickets {
+        float: none;
+        width: 90vw;
+    }
+
+    .main_content > .tickets > .left {
+        float: none;
+        width: 90vw;
+    }
+
+    .main_content > .tickets > .left > h2 {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .main_content > .tickets > .right {
+        float: none;
+        width: 90vw;
+        margin: 20px 20px;
+    }
+    
+    .main_content > .tickets > .right li {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* 위치 */
+    .main_content > .location {
+        float: none;
+        width: 90vw;
+    }
+
+    .main_content > .location > .left  {
+        float: none;
+        width: 90vw;
+    }
+
+    .main_content > .location > .left > h2 {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .main_content > .location > .right {
+        float: none;
+        width: 90vw;
+        margin: 20px 20px;
+    }
+
+    .main_content > .location > .right > p {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* 접근성 */
+    .main_content > .access {
+        float: none;
+        width: 90vw;
+    }
+
+    .main_content > .access > .left {
+        float: left;
+        width: 90vw;
+    }
+
+    .main_content > .access > .left > h2 {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .main_content > .access > .right {
+        float: none;
+        width: 90vw;
+        margin: 20px 20px;
+    }
+
+    .main_content > .access > .right > p {
+        width: 90%;
+        margin: 0 auto;
+    }
 
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+    #content_wrap > .main_content {
+        width: 90vw;
+    }
 
+    .main_content > .date {
+        width: 90vw;
+    }
+
+    .main_content > .notice {
+        float: none;
+        width: 100%;
+    }
 }
     
 @media screen and (min-width: 1024px) {
     #content_wrap > .main_content {
         width: 1024px;
-        margin: 0 auto;
+    }
+
+    .main_content > .date {
+        width: 1024px;
     }
 }
 

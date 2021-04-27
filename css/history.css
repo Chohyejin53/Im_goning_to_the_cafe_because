@@ -13,50 +13,6 @@
     width: 100%;
 }
 
-/* 슬라이드 */
-/* .slide {
-    width: 1024px;
-    height: 500px;
-    overflow: hidden;
-    position: relative;
-    margin: 0 auto;
-}
-
-.slide .slide_box {
-    width: 4096px;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-}
-
-.slide .slide_box .boxs {
-    float: left;
-    width: 1024px;
-    height: 500px;
-}
-
-#next {
-    position: absolute;
-    top: 0px;
-    left: 0;
-    cursor: pointer;
-    z-index: 11;
-    width: 500px;
-    height: 500px;
-
-}
-
-#back {
-    position: absolute;
-    top: 0px;
-    right: 0;
-    cursor: pointer;
-    z-index: 11;
-    width: 500px;
-    height: 500px;
-} */
-
 /* 미술관 역사(history) 텍스트 */
 .video_container > .history {
     width: 1024px;
