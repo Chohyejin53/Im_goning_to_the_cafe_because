@@ -51,11 +51,11 @@
     column-gap: 10px;
 }
 
-#content_wrap > .main_content > .columns > .columns_img {
+#content_wrap > .main_content .columns > .columns_img {
     display: inline-block;
 }
 
-#content_wrap > .main_content > .columns > .columns_img > a > img {
+#content_wrap > .main_content .columns > .columns_img > a > img {
     width: 100%;
     margin-bottom: 5px;
 }

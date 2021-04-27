@@ -93,6 +93,7 @@
 @media screen and (max-width: 767px) {
     /* 메인 비주얼 이미지 및 텍스트 */
 
+
     #main_content > .logo_wrap {
         width: 90vw;
     }

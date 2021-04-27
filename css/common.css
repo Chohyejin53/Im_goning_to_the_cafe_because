@@ -252,16 +252,18 @@ p {
         text-align: center;
         padding: 5px 0;
         border-bottom: none;
+        box-sizing: border-box; 
     }
 
     #main_footer > .bottom_info {
         width: 90vw;
+        box-sizing: border-box;
+        border: 1px solid #252c41;
     }
 
     .bottom_info > .bottom_left {
         float: none;
         width: 90vw;
-        border: 1px solid #252c41;
     }
     
     .bottom_info > .bottom_left > img {
