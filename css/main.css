@@ -25,7 +25,7 @@
     width: 700px;
     height: auto;
     margin: 20% auto;
-    background: yellow;
+    background: rosybrown;
     z-index: -99;
 }
 
@@ -146,7 +146,8 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     /* 메인 비주얼 이미지 및 텍스트 */
     #main_content > .logo_wrap {
-        width: 90vw;
+        /* width: 90vw; */
+        min-width: fit-content;
     }
 
     .logo > .main_img {
@@ -180,5 +181,9 @@
 
     .logo > .main_img {
         width: 700px;
+    }
+
+    .intro_wrap > .message .message_img {
+        padding-top: 50px;
     }
 }

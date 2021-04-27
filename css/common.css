@@ -124,9 +124,9 @@ p {
 
 #main_footer {
     width: 1024px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 10px auto;
-    height: 200px;
+    height: auto;
     overflow: hidden;
 }
 
@@ -222,6 +222,10 @@ p {
 
 /* 미디어 쿼리 */
 @media screen and (max-width: 767px) {
+    .main_header {
+        min-width: 300px;
+    }
+
     .nav_wrap .gnb {
         display: none;
     }
@@ -237,8 +241,6 @@ p {
     /* 푸터 */
     #main_footer {
         width: 90vw;
-        height: auto;
-        margin: 0 auto;
     }
 
     #main_footer > .sns {
@@ -259,6 +261,7 @@ p {
         width: 90vw;
         box-sizing: border-box;
         border: 1px solid #252c41;
+        margin-bottom: 20px;
     }
 
     .bottom_info > .bottom_left {
@@ -311,6 +314,7 @@ p {
 
     #main_footer > .bottom_info {
         width: 90vw;
+        margin-bottom: 20px;
     }
     
 
