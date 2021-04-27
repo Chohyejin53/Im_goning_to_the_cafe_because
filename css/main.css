@@ -71,7 +71,7 @@
 .intro_wrap > .message > .message_txt > h2 { 
     font-family: 'Fraunces', serif;
     font-size: 2em;
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 20px;
 }
 
@@ -128,12 +128,12 @@
     }
 
     .intro_wrap > .message .message_txt h2 {
-        width: 80vw;
+        width: 90vw;
         margin: 0 auto;
     }
 
     .intro_wrap > .message .message_txt p {
-        width: 80vw;
+        /* width: 90vw; */
         margin: 0 auto;
     }
 
