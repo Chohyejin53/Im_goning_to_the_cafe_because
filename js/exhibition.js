@@ -30,6 +30,18 @@ $(function(){
         success: function (data) {
             console.log(data);
             var records = data.records;
+
+            $('.slider_wrap li').find('h2').each(function(i, e){
+                for(var i=0; i<records.length; i++) {
+                    console.log(records[i].title);
+                    var title = records[i].title;
+                    var shift = title.shift;
+
+                    $('.slider_wrap li').find('h2').append(shift);
+                };  
+            });
+            
+            
             
             for(var i=0; i<records.length; i++) {
                 console.log(records[i].title);
@@ -38,7 +50,7 @@ $(function(){
                     console.log($('.slider_wrap li').find('h2'));
                     // $(".slider_wrap li h2").eq(j).append(records[i].title);
                 };
-                // $(currentExTitle).append(records[i].title);
+                $(currentExTitle).append(records[i].title);
             };    
         },
         error: function (request, status, error) {
