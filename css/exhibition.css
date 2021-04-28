@@ -32,12 +32,30 @@
 
 #content_wrap > .main_content .slider_wrap {
     margin: 20px auto;
+    height: 100%;
     /* position: relative; */
 }
 
 #content_wrap > .main_content .multiple_slider img {
     width: 100%;
 }
+
+#content_wrap > .main_content .multiple_slider h2 {
+    margin: 5px auto;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#content_wrap > .main_content .multiple_slider p {
+    margin-top: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    text-align: right;
+}
+
 /* 
 .multiple .bx-prev, .multiple .bx-next {
     position: absolute;
@@ -201,6 +219,7 @@
     }
 
     #content_wrap > .main_content > .current_ex > .slider_wrap {
+
         max-width: 1024px;
     }
 }

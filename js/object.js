@@ -1,4 +1,14 @@
-
+        //컬러 인코딩 후 컬러 코드 사용하기
+        
+        var encodeColor = encodeURIComponent("#c8af96");  //컬러코드 인코딩
+        var url = "https://api.harvardartmuseums.org/object";
+        url += "?color=" + encodeColor;
+        url += "&apikey=a35af484-c468-4ceb-8054-5aa044a7f8b6";
+        console.log("color: " + encodeColor);
+        console.log("url: " + url);
+    
+    
+    
     //color 코드 넣기
     // var arr = [];
     // for(var i=0; i<obj.length; i++) {
