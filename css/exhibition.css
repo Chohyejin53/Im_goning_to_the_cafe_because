@@ -37,11 +37,14 @@
 }
 
 #content_wrap > .main_content .multiple_slider img {
-    width: 100%;
+    margin: 0 auto;
+    width: 200px;
+    height: 300px;
 }
 
 #content_wrap > .main_content .multiple_slider h2 {
-    margin: 5px auto;
+    margin: 5px 10px;
+    height: 40px;
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
     font-weight: bold;
@@ -50,7 +53,7 @@
 }
 
 #content_wrap > .main_content .multiple_slider p {
-    margin-top: 5px;
+    margin: 5px 20px;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1em;
     text-align: right;
@@ -219,7 +222,6 @@
     }
 
     #content_wrap > .main_content > .current_ex > .slider_wrap {
-
         max-width: 1024px;
     }
 }
