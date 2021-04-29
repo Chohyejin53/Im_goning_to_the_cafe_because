@@ -15,7 +15,7 @@
     width: 1024px;
     margin: 0 auto;
     background: #f4f5f9;
-    height: 500px;
+    height: auto;
 }
 
 #content_wrap > .main_content > .current_ex > .ex_tit {
@@ -43,7 +43,7 @@
 }
 
 #content_wrap > .main_content .multiple_slider h2 {
-    margin: 5px 10px;
+    margin: 20px 10px;
     height: 40px;
     font-family: 'Fraunces', serif;
     font-style: italic;
@@ -61,7 +61,7 @@
 }
 
 #content_wrap > .main_content .multiple_slider p:first-child {
-    margin-top: 5px;
+    margin-top: 25px;
 }
 
 #content_wrap > .main_content .multiple_slider p:last-child {

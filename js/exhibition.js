@@ -37,7 +37,7 @@ $(function(){
                     // console.log(records[i].begindate);
                     // console.log(records[i].enddate);
 
-                    if(records[i].hasOwnProperty('poster')) {
+                    if (records[i].hasOwnProperty('poster')) {
                         var currentposter = records[i].poster.imageurl;
                     } else {
                         var currentposter = '"../images/preparing_img.svg"';
@@ -48,7 +48,6 @@ $(function(){
                     var currentEnddate = records[i].enddate;
 
                     tag += '<li class="exhibitionList">'
-
                     tag += '<img src=' + currentposter + '>';
                     tag += '<h2 class="title">' + currentTitle + '</h2>';
                     tag += '<p class="begindate">'+ currentBegindate +'</p>';
@@ -67,3 +66,7 @@ $(function(){
             console.log("error:" + error);
         }
     });
+
+
+    // 다가오는 전시 api 
+    
