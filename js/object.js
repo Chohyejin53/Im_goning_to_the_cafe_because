@@ -1,3 +1,43 @@
+
+//색 불러오기
+var colorUrl = "https://api.harvardartmuseums.org/color";
+colorUrl += "?apikey=a35af484-c468-4ceb-8054-5aa044a7f8b6";
+colorUrl += "&size=100";
+console.log("url: " + colorUrl);
+    
+    $.ajax({
+        type: "GET",
+        url: colorUrl,
+        dataType: "json",
+        async: false,
+        success: function (data) {
+            console.log(data);
+            var records = data.records;
+            var info = data.info;
+                for(var i = 0; i < records.length; i++) {
+                    var hexCode = data.records[i].hex;
+
+                    console.log(hexCode);
+                };
+                
+                // if(info.hasOwnProperty('next')) {
+                //     colorUrl += "&page=2"
+                // };
+
+        },
+        error: function (request, status, error) {
+            console.log("code:" + request.status);
+            console.log("message:" + request.responseText);
+            console.log("error:" + error);
+        }
+    });        
+        
+        
+        
+        
+        
+        
+        
         //컬러 인코딩 후 컬러 코드 사용하기
         
         var encodeColor = encodeURIComponent("#c8af96");  //컬러코드 인코딩
@@ -6,9 +46,7 @@
         url += "&apikey=a35af484-c468-4ceb-8054-5aa044a7f8b6";
         console.log("color: " + encodeColor);
         console.log("url: " + url);
-    
-    
-    
+
     //color 코드 넣기
     // var arr = [];
     // for(var i=0; i<obj.length; i++) {

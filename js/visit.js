@@ -15,16 +15,16 @@ $(".now_date").append(nowDate);
 
 
 //오늘의 색
-var colorUrl = "https://api.harvardartmuseums.org/spectrum";
+var spectrumUrl = "https://api.harvardartmuseums.org/spectrum";
 var currentMonth = today.getMonth() + 1;
-colorUrl += "?q=month:" + currentMonth;
-colorUrl += "&apikey=a35af484-c468-4ceb-8054-5aa044a7f8b6";
-colorUrl += "&size=50";
-console.log("url: " + colorUrl);
+spectrumUrl += "?q=month:" + currentMonth;
+spectrumUrl += "&apikey=a35af484-c468-4ceb-8054-5aa044a7f8b6";
+spectrumUrl += "&size=50";
+console.log("url: " + spectrumUrl);
     
     $.ajax({
         type: "GET",
-        url: colorUrl,
+        url: spectrumUrl,
         dataType: "json",
         async: false,
         success: function (data) {
