@@ -126,12 +126,7 @@
 }
 
 #content_wrap > .sub_content > .upcoming_ex > .ex_plan {
-    /* float: left;
-    width: 20%;
-    margin: 30px 10px; */
-    /* padding: 15px 15px 15px 0px;
-    border-right: 1px solid #252c41;
-    border-bottom: 1px solid #252c41; */
+    margin: 0 auto;
 }
 
 #content_wrap > .sub_content > .upcoming_ex > .ex_plan > .upcoming_plan {
@@ -227,8 +222,7 @@
     
     #content_wrap > .sub_content > .upcoming_ex > .ex_plan > .upcoming_plan {
         float: left;
-        width: 45%;
-        
+        width: 40%;
     }
 }
     

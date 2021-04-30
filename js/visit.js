@@ -28,28 +28,24 @@ console.log("url: " + colorUrl);
         dataType: "json",
         async: false,
         success: function (data) {
-            console.log(data);
+            // console.log(data);
             var records = data.records;
 
-            //sort해서 day 정렬맞춰주기
+            //sort해서 day기준 오름차순으로 정렬맞춰주기
             records.sort(function (a, b) { 
                 return a.day < b.day ? -1 : a.day > b.day ? 1 : 0;  
             });
+            // console.log(records);
 
-            console.log(records);
-            
-            
-            
             for(var i = 0; i < records.length; i++) {
-
-                var allColor = records[i].color;
-                console.log(allColor);
-                
+                if(records[i].day == nowDate) {
+                    var todayColor = records[i].color;
+                    };
                 };
+
+                $(".current_year, .now_month, .now_date").css({"color" : todayColor});
+                $(".color_bar").css({"background" : todayColor});
             
-                var todayIndex = nowDate - 1;
-                var todayColor = allColor[todayIndex];
-                // $(".multiple_slider").append(tag);
 
         },
         error: function (request, status, error) {
