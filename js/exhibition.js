@@ -28,10 +28,10 @@ $(function(){
         dataType: "json",
         async: false,
         success: function (data) {
-            console.log(data);
+            // console.log(data);
             var records = data.records;
             var tag = "";
-            for(var i  =0; i < records.length; i++) {
+            for(var i = 0; i < records.length; i++) {
                     // console.log(records[i].poster);
                     // console.log(records[i].title);
                     // console.log(records[i].begindate);
@@ -82,12 +82,12 @@ $(function(){
         dataType: "json",
         async: false,
         success: function (data) {
-            console.log(data);
+            // console.log(data);
             var records = data.records;
             var tag = "";
-            for(var i  =0; i < records.length; i++) {
-                    console.log(records[i].title);
-                    console.log(records[i].venues[i].begindate);
+            for(var i = 0; i < records.length; i++) {
+                    // console.log(records[i].title);
+                    // console.log(records[i].venues[i].begindate);
 
                     var upcomingTitle = records[i].title;
                     var upcomingBegindate = records[i].venues[i].begindate;

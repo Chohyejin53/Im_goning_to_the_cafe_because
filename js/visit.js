@@ -14,3 +14,47 @@ $(".now_month").append(nowMonth);
 $(".now_date").append(nowDate);
 
 
+//오늘의 색
+var colorUrl = "https://api.harvardartmuseums.org/spectrum";
+var currentMonth = today.getMonth() + 1;
+colorUrl += "?q=month:" + currentMonth;
+colorUrl += "&apikey=a35af484-c468-4ceb-8054-5aa044a7f8b6";
+colorUrl += "&size=50";
+console.log("url: " + colorUrl);
+    
+    $.ajax({
+        type: "GET",
+        url: colorUrl,
+        dataType: "json",
+        async: false,
+        success: function (data) {
+            console.log(data);
+            var records = data.records;
+
+            //sort해서 day 정렬맞춰주기
+            records.sort(function (a, b) { 
+                return a.day < b.day ? -1 : a.day > b.day ? 1 : 0;  
+            });
+
+            console.log(records);
+            
+            
+            
+            for(var i = 0; i < records.length; i++) {
+
+                var allColor = records[i].color;
+                console.log(allColor);
+                
+                };
+            
+                var todayIndex = nowDate - 1;
+                var todayColor = allColor[todayIndex];
+                // $(".multiple_slider").append(tag);
+
+        },
+        error: function (request, status, error) {
+            console.log("code:" + request.status);
+            console.log("message:" + request.responseText);
+            console.log("error:" + error);
+        }
+    });
