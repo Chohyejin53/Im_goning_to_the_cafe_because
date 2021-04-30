@@ -16,15 +16,15 @@ $(function(){
 
 
 // 현재 전시 api 
-    var url = "https://api.harvardartmuseums.org/exhibition";
+    var exhibitionUrl = "https://api.harvardartmuseums.org/exhibition";
     var currentStatus = "current";
-    url += "?status=" + currentStatus;
-    url += "&apikey=a35af484-c468-4ceb-8054-5aa044a7f8b6";
-    console.log("url: " + url);
+    exhibitionUrl += "?status=" + currentStatus;
+    exhibitionUrl += "&apikey=a35af484-c468-4ceb-8054-5aa044a7f8b6";
+    console.log("url: " + exhibitionUrl);
     
     $.ajax({
         type: "GET",
-        url: url,
+        url: exhibitionUrl,
         dataType: "json",
         async: false,
         success: function (data) {
@@ -69,4 +69,44 @@ $(function(){
 
 
     // 다가오는 전시 api 
+    
+    var exhibitionUrl = "https://api.harvardartmuseums.org/exhibition";
+    var upcomingStatus = "upcoming";
+    exhibitionUrl += "?status=" + upcomingStatus;
+    exhibitionUrl += "&apikey=a35af484-c468-4ceb-8054-5aa044a7f8b6";
+    console.log("url: " + exhibitionUrl);
+    
+    $.ajax({
+        type: "GET",
+        url: exhibitionUrl,
+        dataType: "json",
+        async: false,
+        success: function (data) {
+            console.log(data);
+            var records = data.records;
+            var tag = "";
+            for(var i  =0; i < records.length; i++) {
+                    console.log(records[i].title);
+                    console.log(records[i].venues[i].begindate);
+
+                    var upcomingTitle = records[i].title;
+                    var upcomingBegindate = records[i].venues[i].begindate;
+
+                    tag += '<div class="upcoming_plan">'
+                    tag += '<h3 class="title">' + upcomingTitle + '</h3>';
+                    tag += '<p class="begindate">'+ upcomingBegindate +'</p>';
+                    tag += '</div>'
+
+                    // console.log(tag);
+                };
+                
+                $(".ex_plan").append(tag);
+
+        },
+        error: function (request, status, error) {
+            console.log("code:" + request.status);
+            console.log("message:" + request.responseText);
+            console.log("error:" + error);
+        }
+    });
     

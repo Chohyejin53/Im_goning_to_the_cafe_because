@@ -126,22 +126,35 @@
 }
 
 #content_wrap > .sub_content > .upcoming_ex > .ex_plan {
-    float: left;
+    /* float: left;
     width: 20%;
+    margin: 30px 10px; */
+    /* padding: 15px 15px 15px 0px;
+    border-right: 1px solid #252c41;
+    border-bottom: 1px solid #252c41; */
+}
+
+#content_wrap > .sub_content > .upcoming_ex > .ex_plan > .upcoming_plan {
+    float: left;
+    width: 33.3%;
+    height: 80px;
     margin: 30px 10px;
     padding: 15px 15px 15px 0px;
     border-right: 1px solid #252c41;
     border-bottom: 1px solid #252c41;
 }
 
-#content_wrap > .sub_content > .upcoming_ex > .ex_plan > h3 {
+
+#content_wrap > .sub_content > .upcoming_ex .upcoming_plan > h3 {
+    height: 50px;
     font-family: 'Fraunces', serif;
     font-size: 1.5em;
     font-weight: bold;
     text-align: right;
 }
 
-#content_wrap > .sub_content > .upcoming_ex > .ex_plan > p {
+#content_wrap > .sub_content > .upcoming_ex .upcoming_plan > p {
+    margin-top: 10px;
     font-family: 'Fraunces', serif;
     font-size: 1.2em;
     text-align: right;
@@ -156,6 +169,10 @@
 
     #content_wrap > .main_content > .current_ex > .ex_tit {
         width: 90vw;
+    }
+
+    #content_wrap > .main_content > .current_ex > .slider_wrap {
+        width: 90%;
     }
 
     #content_wrap > .sub_content > .upcoming_ex {
@@ -173,14 +190,10 @@
         text-align: center;
     }
     
-    #content_wrap > .sub_content > .upcoming_ex > .ex_plan {
+    #content_wrap > .sub_content > .upcoming_ex > .ex_plan > .upcoming_plan {
         float: none;
         width: 80vw;
         margin: 30px auto;
-    }
-
-    #content_wrap > .main_content > .current_ex > .slider_wrap {
-        width: 90%;
     }
 }
 
@@ -193,33 +206,30 @@
         width: 90vw;
     }
 
+    #content_wrap > .main_content > .current_ex > .slider_wrap {
+        width: 90%;
+    }
+
     #content_wrap > .sub_content > .upcoming_ex {
         width: 90vw;
         height: auto;
     }
 
     #content_wrap > .sub_content > .upcoming_ex > .ex_tit {
-        float: left;
-        width: 40vw;
-        margin: 30px 20px;
+        float: none;
+        width: 80vw;
+        margin: 30px auto;
     }
     
     #content_wrap > .sub_content > .upcoming_ex > .ex_tit > h2 {
-        text-align: right;
-        width: 200px;
-        margin-left: 40%;
+        text-align: center;
     }
     
-    #content_wrap > .sub_content > .upcoming_ex > .ex_plan {
+    #content_wrap > .sub_content > .upcoming_ex > .ex_plan > .upcoming_plan {
         float: left;
-        width: 40vw;
-        margin: 30px 10px;
+        width: 45%;
+        
     }
-
-    #content_wrap > .main_content > .current_ex > .slider_wrap {
-        width: 90%;
-    }
-
 }
     
 @media screen and (min-width: 1024px) {
