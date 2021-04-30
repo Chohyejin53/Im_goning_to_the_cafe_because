@@ -51,7 +51,7 @@ $(function(){
                     tag += '<img src=' + currentposter + '>';
                     tag += '<h2 class="title">' + currentTitle + '</h2>';
                     tag += '<p class="begindate">'+ currentBegindate +'</p>';
-                    tag += '<p class="enddate">' + currentEnddate + '</p>';
+                    tag += '<p class="enddate">' + '~ ' + currentEnddate + '</p>';
                     tag += '</li>'
 
                     // console.log(tag);
