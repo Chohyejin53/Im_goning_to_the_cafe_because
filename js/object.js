@@ -93,14 +93,14 @@
                             for(var i = 0; i < objRecords.length; i++) {
                                 for(var j = 0; j < objRecords[i].colors.length; j++) {
                                     allObjColor[i] = objRecords[i].colors[j].color;
-                                    objImg[i] = objRecords[i].url;
-
+                                    var objImg = objRecords[i].url;
+                                    console.log(objImg);
                                     
                                 };
                                 
                             };
                             console.log(objColor);
-                            console.log(objImg);
+                            
 
 
                             //중복되는 색 제거 (마지막에 오기)
