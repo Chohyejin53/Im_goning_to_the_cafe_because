@@ -95,7 +95,6 @@
                                     allObjColor[i] = objRecords[i].colors[j].color;
                                     var objImg = objRecords[i].url;
                                     console.log(objImg);
-                                    
                                 };
                                 
                             };
