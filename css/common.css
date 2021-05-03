@@ -128,7 +128,7 @@ p {
 #main_footer {
     width: 1024px;
     margin: 20px auto;
-    padding: 10px auto;
+    padding: 10px;
     height: auto;
     overflow: hidden;
 }
