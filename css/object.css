@@ -55,9 +55,9 @@
     display: inline-block;
 }
 
-#content_wrap > .main_content .columns > .columns_img > a > img {
+#content_wrap > .main_content .columns > .columns_img img {
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /* 미디어 쿼리 */
