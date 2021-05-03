@@ -105,7 +105,7 @@
     .logo_wrap > .main_logo {
         width: 70vw;
         height: auto;
-        min-width: 200px;
+        min-width: 250px;
     }
 
     .logo > h1 {
@@ -125,7 +125,7 @@
 
     .intro_wrap > .message .message_txt {
         float: none;
-        min-width: 300px;
+        min-width: 250px;
     }
 
     .intro_wrap > .message .message_txt h2 {
@@ -141,7 +141,7 @@
     .intro_wrap > .message .message_img {
         float: none;
         width: 250px;
-        min-width: 300px;
+        min-width: 250px;
     }
 
 }
