@@ -98,7 +98,6 @@
                                 };
                                 
                             };
-                            console.log(objColor);
                             
 
 
@@ -106,6 +105,8 @@
                             objColor = allObjColor.filter(function(item, pos, self) {
                                 return self.indexOf(item) == pos;
                             });
+
+                            console.log(objColor);
                             
                             for(var i= 0; i < objColor.length; i++) {
                                 colorData[i] = 1;  // chart.js에 색 비율 1:1로 지정하기 위해서
@@ -122,6 +123,7 @@
                             datasets: [ { 
                                 data: colorData, 
                                 backgroundColor: objColor, 
+                                hoverBackgroundColor: objColor,
                                 // data: colorData, 
                                 // backgroundColor: arr, 
                                 borderWidth: 0, 
@@ -153,6 +155,11 @@
                     document.getElementById('myChart'),
                     config
                 );
+
+                function chartClickEvent(event, array){
+                    console.log(array);
+                    console.log("color hex code: " + array[0].element.options.backgroundColor);
+                }
 
                 
                         },
@@ -198,10 +205,7 @@
     /*
     이벤트 참고- https://stackoverflow.com/questions/46672925/chart-js-onclick-event-with-a-mixed-chart-which-chart-did-i-click
     */
-    function chartClickEvent(event, array){
-        console.log(array);
-        console.log("color hex code: " + array[0].element.options.backgroundColor);
-    }
+    
 
 
 
