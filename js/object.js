@@ -159,19 +159,30 @@
             );
 
             function chartClickEvent(event, array){
+                var pickColor = array[0].element.options.backgroundColor;
+
+                var testArr = [];
+
                 for(var i = 0; i < objRecords.length; i++) {
+                    
+                    if (objRecords[i].colors == undefined) {
+                        console.log("error: " + i);
+                        continue;
+                    }
                     for(var j = 0; j < objRecords[i].colors.length; j++) {
-                        if(array[0].element.options.backgroundColor == objRecords[i].colors[j].color) {
+                        if(pickColor == objRecords[i].colors[j].color) {
                             var imgColorUrl = objRecords[i].baseimageurl;
-                            
+                            testArr.push(imgColorUrl);
                         }
                     }
                 }
+
+                console.log(testArr);
                 console.log(imgColorUrl);
                 console.log(array);
                 console.log("color hex code: " + array[0].element.options.backgroundColor);
             }
-
+                
             
                     },
                     error: function (request, status, error) {
