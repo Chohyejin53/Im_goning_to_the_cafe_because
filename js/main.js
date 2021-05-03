@@ -22,10 +22,10 @@ $.ajax({
                 if (records[i].images == undefined) {
                     console.log("error");
                     continue;
-                };
+                }
                 mainLogoImg[i] = records[i].images[0].baseimageurl;
 
-            };
+            }
             console.log(mainLogoImg);    
         // console.log(tag);
 

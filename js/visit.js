@@ -40,8 +40,8 @@ console.log("url: " + spectrumUrl);
             for(var i = 0; i < records.length; i++) {
                 if(records[i].day == nowDate) {
                     var todayColor = records[i].color;
-                    };
-                };
+                    }
+                }
 
                 $(".current_year, .now_month, .now_date").css({"color" : todayColor});
                 $(".color_bar").css({"background" : todayColor});

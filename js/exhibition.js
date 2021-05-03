@@ -41,7 +41,7 @@ $(function(){
                         var currentposter = records[i].poster.imageurl;
                     } else {
                         var currentposter = '"../images/preparing_img.svg"';
-                    };
+                    }
                     
                     var currentTitle = records[i].title;
                     var currentBegindate = records[i].begindate;
