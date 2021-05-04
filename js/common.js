@@ -45,7 +45,7 @@
                 $(".nav_wrap").height(390);
                 $("#content_wrap").show();
                 $("#footer_wrap").show();
-
+                $(".main_header").css({"background":"none"});
                 $(".mobile_menu").hide();
             }
         }
