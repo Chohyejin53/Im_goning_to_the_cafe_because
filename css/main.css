@@ -1,0 +1,29 @@
+/* 컨텐츠 */
+#content_wrap {
+    width: 100%;
+}
+
+#content_wrap > .main_visual {
+    width: 100%;
+    background: #ffc600;
+}
+
+#content_wrap > .main_visual > .visual_img {
+    width: 1024px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#content_wrap > .main_visual > .visual_img > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#content_wrap > .main_content {
+    width: 1024px;
+    margin: 0 auto;
+    height: 3000px;
+}

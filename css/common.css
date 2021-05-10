@@ -81,21 +81,11 @@ a {
     background: #104495;
     z-index: -5;
 }
-/* 컨텐츠 */
-#content_wrap {
-    width: 100%;
-}
-
-.main_content {
-    width: 1024px;
-    margin: 0 auto;
-    height: 500px;
-}
 
 /* 푸터 */
 #footer_wrap {
     width: 100%;
-    margin-top: 10px;
+    margin: 10px 0;
     border-bottom: 2px solid #104495;
 }
 
@@ -125,10 +115,6 @@ a {
 .main_footer > .fnb_wrap > .fnb > li > a {
     text-decoration: none;
 }
-
-/* .main_footer > .fnb_wrap > .fnb > li > a:hover {
-
-} */
 
 .main_footer > .fnb_wrap > .fnb .sns {
     overflow: hidden;
