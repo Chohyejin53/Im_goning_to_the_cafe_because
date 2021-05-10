@@ -1,5 +1,6 @@
 //스크롤바 내렸을떄, 메뉴바 고정
 var headerHeight = $('#header_wrap').height();
+$('#header_wrap').hide();
 $(window).scroll( function() {
 	if ( $( this ).scrollTop() > 600 ) {
 		$('#header_wrap').fadeIn();
