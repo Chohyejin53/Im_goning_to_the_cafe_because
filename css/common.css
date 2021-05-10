@@ -28,7 +28,7 @@ a {
 
 .main_header > .main_logo {
     float: left;
-    width: 300px;
+    width: 250px;
     height: auto;
     margin-top: 30px;
     margin-left: 10px;
@@ -36,9 +36,8 @@ a {
 
 .main_header > .nav_wrap {
     float: right;
-    /* position: relative; */
     width: 400px;
-    margin-top: 85px;
+    margin-top: 70px;
 }
 .main_header > .nav_wrap > .gnb {
     overflow: hidden; 
