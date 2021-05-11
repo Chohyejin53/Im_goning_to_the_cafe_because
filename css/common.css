@@ -196,24 +196,21 @@ a {
 
 
 
-
-
 /* 미디어 쿼리 */
 @media screen and (max-width: 767px) {
     /* 헤더 */
     .main_header {
         width: 95vw;
-        min-width: 250px;
+        min-width: 230px;
     }
 
     .main_header > .main_logo {
-        width: 250px;
-        min-width: calc(250px - 10%);
+        width: 150px;
         margin-left: 5px;
     }
 
     .main_header > .nav_wrap {
-        margin-top: 50px;
+        margin-top: 40px;
     }
 
     .main_header > .nav_wrap > .gnb {
@@ -222,6 +219,8 @@ a {
 
     .nav_wrap > .trigger {
         display: block;
+        width: 20px;
+
     }
 
     /* 푸터 */
