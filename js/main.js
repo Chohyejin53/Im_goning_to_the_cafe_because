@@ -1,14 +1,23 @@
 //스크롤바 내렸을떄, 메뉴바 고정
 var headerHeight = $('#header_wrap').height();
 $('#header_wrap').hide();
-$(window).scroll( function() {
+$(window).scroll ( function() {
 	if ( $( this ).scrollTop() > 600 ) {
 		$('#header_wrap').fadeIn();
-        $('#header_wrap').css('position','fixed');
+        $('#header_wrap').css({
+			'position':'fixed',
+			'z-index' :'2'
+		});
         $('content_wrap','footer_wrap').css('margin-top', headerHeight); 
 	} else {
-		$('#header_wrap').fadeOut();
+		if($(".mobile.close").is(":visible")) {
+			$('#header_wrap').show();
+		} 
+
 	}
+
+	// else { 
+		// $('#header_wrap').fadeOut(); }
 });
 
 //메인비주얼 전체화면 
