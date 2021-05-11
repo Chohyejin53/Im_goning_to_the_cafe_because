@@ -18,7 +18,6 @@ $(".trigger").on ({
 
         } else { /*닫기 메뉴 버튼이 보일때*/
             /* 모바일 햄버거 버튼 show */
-            if ( $( this ).scrollTop() > 600 ) {
                 $(".mobile.hamburger").show();
                 $(".mobile.close").hide();
                 
@@ -28,17 +27,6 @@ $(".trigger").on ({
                 $("#footer_wrap").show();
                 $(".mobile_menu").hide();
                 $(".under_line").show();
-            
-            } else {
-                $(".mobile.hamburger").show();
-                $(".mobile.close").hide();
-
-                $('#header_wrap').hide();
-                $("#content_wrap").show();
-                $("#footer_wrap").show();
-                $(".mobile_menu").hide();
-                $(".under_line").show();
-            }
             
         }
     }, 

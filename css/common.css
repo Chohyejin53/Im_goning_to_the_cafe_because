@@ -28,7 +28,7 @@ a {
 
 .main_header > .main_logo {
     float: left;
-    width: 250px;
+    width: 150px;
     height: auto;
     margin-top: 30px;
     margin-left: 10px;
@@ -37,12 +37,12 @@ a {
 .main_header > .nav_wrap {
     float: right;
     overflow: hidden;
-    margin-top: 70px;
+    margin-top: 40px;
 }
 
 .main_header > .nav_wrap > .gnb {
     overflow: hidden; 
-    width: 400px;
+    width: 300px;
     margin-left: 10px;
     height: 35px;
     display: block;
@@ -57,7 +57,7 @@ a {
 .main_header > .nav_wrap > .gnb > li > a {
     font-family: 'Bitter', serif;
     font-weight: bold;
-    font-size: 1.6em;
+    font-size: 1.3em;
     text-align: center;
     color: #104495;
     text-decoration: none;
@@ -75,7 +75,7 @@ a {
 
 .nav_wrap > .trigger {
     float: right;
-    width: 30px;
+    width: 20px;
     margin-right: 10px;
     display: none;
 }
@@ -205,12 +205,12 @@ a {
     }
 
     .main_header > .main_logo {
-        width: 150px;
+        width: 130px;
         margin-left: 5px;
     }
 
     .main_header > .nav_wrap {
-        margin-top: 40px;
+        margin-top: 35px;
     }
 
     .main_header > .nav_wrap > .gnb {
@@ -252,7 +252,7 @@ a {
     }
 
     .main_header > .nav_wrap {
-        margin-top: 50px;
+        margin-top: 40px;
     }
 
     .main_header > .nav_wrap > .gnb {
