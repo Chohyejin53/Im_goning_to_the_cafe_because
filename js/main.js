@@ -8,9 +8,9 @@ $(window).scroll ( function() {
 			'position':'fixed',
 			'z-index' :'2'
 		});
-        $('content_wrap','footer_wrap').css('margin-top', headerHeight); 
+        $('#content_wrap','#footer_wrap').css('margin-top', headerHeight); 
 	} else {
-		if($(".mobile.close").is(":visible")) {
+		if($('.mobile.close').is(':visible')) {
 			$('#header_wrap').show();
 		} 
 
