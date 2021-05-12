@@ -13,4 +13,10 @@ var visualHeight = $(window).height();
 $('.visual_img').css('height',visualHeight);
 
 
+//resize 이벤트
+$(window).resize(function() {
+	var height = $(window).height();
+	$('.visual_img').css('height',height);
+});
+
 // 윈도우  크기 바뀌면  자동으로 리사이즈 코드 넣기 

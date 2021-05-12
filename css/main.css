@@ -1,3 +1,9 @@
+@charset "UTF-8";
+@import url(reset.css); 
+
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
 /* 컨텐츠 */
 #content_wrap {
     width: 100%;
@@ -26,4 +32,34 @@
     width: 1024px;
     margin: 0 auto;
     height: 1000px;
+}
+
+#content_wrap > .main_content > .content_introduce > .intro_txt > h3 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #104495;
+    text-align: center;
+    
+}
+
+#content_wrap > .main_content > .content_introduce > .intro_txt > p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.2em;
+    color: #104495;
+    text-align: center;
+    
+}
+
+/* 미디어쿼리 */
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+}
+    
+@media screen and (min-width: 1024px) {
+    
 }
