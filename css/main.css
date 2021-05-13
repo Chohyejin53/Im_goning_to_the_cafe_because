@@ -50,6 +50,59 @@
     
 }
 
+/*  */
+.img_wrap {
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+.img_wrap > .img {
+    width: auto;
+    position: relative;
+}
+.img > img {
+    width: auto;
+    position: fixed;
+}
+
+.img_wrap > .img_1 {
+    z-index: 3;
+}
+
+.img_wrap > .img_2 {
+    z-index: 2;
+}
+
+.img_wrap > .img_3 {
+    z-index: 1;
+}
+.img_wrap > .txt {
+    width: 70%;
+    float: right;
+    overflow: hidden;
+}
+
+.img_wrap > .txt > .msg {
+    float: right;
+    width: 500px;
+}
+
+.animation {
+    animation: rint 1s forwards ease-in;
+    transition: 2s ease-in-out;
+}
+
+@keyframes rint {
+from{
+    opacity: 1;
+}
+to {
+    opacity: 0;
+}
+}
+
 /* 미디어쿼리 */
 @media screen and (max-width: 767px) {
 
