@@ -47,11 +47,11 @@
 <div class="map_wrap">
     <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
 
-    <div id="menu_wrap" class="bg_white">
+    <!-- <div id="menu_wrap" class="bg_white">
         <div class="option">
             <div>
                 <form onsubmit="searchPlaces(); return false;">
-                    키워드 : <input type="text" value="이태원 맛집" id="keyword" size="15"> 
+                    키워드 : <input type="text" value="인천 스타벅스" id="keyword" size="15"> 
                     <button type="submit">검색하기</button> 
                 </form>
             </div>
@@ -59,7 +59,7 @@
         <hr>
         <ul id="placesList"></ul>
         <div id="pagination"></div>
-    </div>
+    </div> -->
 </div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9858a6ff72cdfce1ea4668f8838a5415&libraries=services"></script>
@@ -92,7 +92,8 @@ function searchPlaces() {
 
     goodPlaceList = []; // 검색시 맛집 리스트 배열 초기화
 
-    var keyword = document.getElementById('keyword').value;
+    // var keyword = document.getElementById('keyword').value;
+    var keyword = "인천 스타벅스";
 
     if (!keyword.replace(/^\s+|\s+$/g, '')) {
         alert('키워드를 입력해주세요!');
@@ -134,13 +135,13 @@ function placesSearchCB(data, status, pagination) {
 function displayPlaces(places) {
 
     var listEl = document.getElementById('placesList'), 
-    menuEl = document.getElementById('menu_wrap'),
+    // menuEl = document.getElementById('menu_wrap'),
     fragment = document.createDocumentFragment(), 
     bounds = new kakao.maps.LatLngBounds(), 
     listStr = '';
     
     // 검색 결과 목록에 추가된 항목들을 제거합니다
-    removeAllChildNods(listEl);
+    // removeAllChildNods(listEl);
 
     // 지도에 표시되고 있는 마커를 제거합니다
     removeMarker();
@@ -182,7 +183,7 @@ function displayPlaces(places) {
 
     // 검색결과 항목들을 검색결과 목록 Elemnet에 추가합니다
     listEl.appendChild(fragment);
-    menuEl.scrollTop = 0;
+    // menuEl.scrollTop = 0;
 
     // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
     map.setBounds(bounds);
