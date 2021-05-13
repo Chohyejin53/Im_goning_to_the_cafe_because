@@ -99,25 +99,30 @@
         $(".content img").css('height', imgHeight + 'px' );
         $(".msg").css('height', imgHeight + 'px');
 
-            var yPos = $(window).scrollTop(); 
+            
             var txt_1 = $('.txt_1'); 
             var txt_2 = $('.txt_2'); 
             var txt_3 = $('.txt_3'); 
+            
+
 
             var t1_Y = txt_1.offset().top;
             var t2_Y = txt_2.offset().top;
             var t3_Y = txt_3.offset().top;
-
+            
+            console.log(t1_Y );
+            console.log(t2_Y);
+            console.log(t3_Y);
         $(window).scroll ( function() {
-            if( yPos  <  t1_Y ) {
+            var scrollY = $(window).scrollTop(); 
+            if( scrollY  <  t2_Y ) {
             $(".img_1").addClass('animation');
-        } else if ( yPos  <  t2_Y) {
-            $(".img_1").css('opacity','0');
-            $(".img_2").animate({opacity:"0"}, 200);
-        } else if ( yPos < t3_Y) {
-            $(".img_3").animate({opacity:"1"}, 200);
+        } else if ( scrollY  <  t3_Y) {
+            $(".img_2").addClass('animation');
+        // } else if ( scrollY < t3_Y) {
+        //     $(".img_3").addClass('animation');
         }
-			
+        
 		});
 // });
 
