@@ -1,136 +1,41 @@
-// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
-var infowindow = new kakao.maps.InfoWindow({zIndex:1});
-
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = {
-        center: new kakao.maps.LatLng(37.45240609232767, 126.69969111326523), // 지도의 중심좌표
-        level: 6 // 지도의 확대 레벨
-    };  
-
-// 지도를 생성합니다    
-var map = new kakao.maps.Map(mapContainer, mapOption); 
-
-// 장소 검색 객체를 생성합니다
-var ps = new kakao.maps.services.Places(); 
-
-// 키워드로 장소를 검색합니다
-
-//카페 매장검색
-ps.keywordSearch('인천 스타벅스', placesSearchCB); 
-ps.keywordSearch('인천 투썸플레이스', placesSearchCB); 
-ps.keywordSearch('인천 이디야', placesSearchCB); 
-ps.keywordSearch('인천 할리스', placesSearchCB); 
-
-
-function insertHTML(list, place) {
-    switch (place) {
-        case "star": 
-                // console.log("starList: " + JSON.stringify(list));
-                var starPosition = [];
-                for (var i=0; i < list.length; i++) {
-                    starPosition.push(new kakao.maps.LatLng(list[i].y, list[i].x));
-                }
-                console.log(starPosition);
-                createCoffeeMarkers(starPosition);
-            break;
-        case "twosome": 
-                // console.log("twosomeList: " + JSON.stringify(list));
-                var twosomePosition = [];
-                
-                for (var i=0; i < list.length; i++) {
-                    twosomePosition.push(new kakao.maps.LatLng(list[i].y, list[i].x));
-                }
-                console.log(twosomePosition);
-                createCoffeeMarkers(twosomePosition);
-
-            break;
-        case "ediya": 
-                // console.log("ediyaList: " + JSON.stringify(list));
-                var eidyaPosition = [];
-                
-                for (var i=0; i < list.length; i++) {
-                    eidyaPosition.push(new kakao.maps.LatLng(list[i].y, list[i].x));
-                }
-                console.log(eidyaPosition);
-                createCoffeeMarkers(eidyaPosition);
-
-            break;
-        case "hollis": 
-                // console.log("hollisList: " + JSON.stringify(list));
-                var hollisPosition = [];
-                
-                for (var i=0; i < list.length; i++) {
-                    hollisPosition.push(new kakao.maps.LatLng(list[i].y, list[i].x));
-                }
-                console.log(hollisPosition);
-                createCoffeeMarkers(hollisPosition);
-
-            break;
-
-    }
-}
-
-
-// 키워드 검색 완료 시 호출되는 콜백함수 입니다
-function placesSearchCB (data, status, pagination) {
-    if (status === kakao.maps.services.Status.OK) {
-
-        // // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
-        // // LatLngBounds 객체에 좌표를 추가합니다
-        // var bounds = new kakao.maps.LatLngBounds();
-        // console.log(data);
-        // for (var i=0; i<data.length; i++) {
-        //     displayMarker(data[i]);    
-        //     bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
-        // }    
-
-            var placeNM = data[0].place_name;
-
-            if (placeNM.indexOf('스타벅스') > -1) {
-                insertHTML(data, "star");
-            } else if (placeNM.indexOf('투썸') > -1) {
-                insertHTML(data, "twosome");
-            } else if (placeNM.indexOf('이디야') > -1) {
-                insertHTML(data, "ediya");
-            } else if (placeNM.indexOf('할리스') > -1) {
-                insertHTML(data, "hollis");
-
-            }
-
-            changeMarker('coffee'); 
-
-        // // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
-        // map.setBounds(bounds);
-
-    } 
-}
-
-// // 지도에 마커를 표시하는 함수입니다
-// function displayMarker(place) {
-    
-//     // 마커를 생성하고 지도에 표시합니다
-//     var marker = new kakao.maps.Marker({
-//         map: map,
-//         position: new kakao.maps.LatLng(place.y, place.x) 
-//     });
-
-//     // 마커에 클릭이벤트를 등록합니다
-//     kakao.maps.event.addListener(marker, 'click', function() {
-//         // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
-//         infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>');
-//         infowindow.open(map, marker);
-//     });
-// }
-
-
-
-
-
 // var markerImageSrc = '../images/css_sprites.png';  // 마커이미지의 주소입니다. 스프라이트 이미지 입니다
 //     starMarkers = [], // 스타벅스 마커 객체를 가지고 있을 배열입니다
 //     twosomeMarkers = [], //투썸플레이스 마커 객체를 가지고 있을 배열입니다
 //     ediyaMarkers = []; // 이디야 마커 객체를 가지고 있을 배열입니다
 //     hollisMarkers = []; // 할리스 마커 객체를 가지고 있을 배열입니다    
+
+ // 커피숍 마커가 표시될 좌표 배열입니다
+var coffeePositions = [ 
+    new kakao.maps.LatLng(37.499590490909185, 127.0263723554437),
+    new kakao.maps.LatLng(37.499427948430814, 127.02794423197847),
+    new kakao.maps.LatLng(37.498553760499505, 127.02882598822454),
+    new kakao.maps.LatLng(37.497625593121384, 127.02935713582038),
+    new kakao.maps.LatLng(37.49646391248451, 127.02675574250912),
+    new kakao.maps.LatLng(37.49629291770947, 127.02587362608637),
+    new kakao.maps.LatLng(37.49754540521486, 127.02546694890695)                
+];
+
+// 편의점 마커가 표시될 좌표 배열입니다
+var storePositions = [
+    new kakao.maps.LatLng(37.497535461505684, 127.02948149502778),
+    new kakao.maps.LatLng(37.49671536281186, 127.03020491448352),
+    new kakao.maps.LatLng(37.496201943633714, 127.02959405469642),
+    new kakao.maps.LatLng(37.49640072567703, 127.02726459882308),
+    new kakao.maps.LatLng(37.49640098874988, 127.02609983175294),
+    new kakao.maps.LatLng(37.49932849491523, 127.02935780247945),
+    new kakao.maps.LatLng(37.49996818951873, 127.02943721562295)
+];
+
+// 주차장 마커가 표시될 좌표 배열입니다
+var carparkPositions = [
+    new kakao.maps.LatLng(37.49966168796031, 127.03007039430118),
+    new kakao.maps.LatLng(37.499463762912974, 127.0288828824399),
+    new kakao.maps.LatLng(37.49896834100913, 127.02833986892401),
+    new kakao.maps.LatLng(37.49893267508434, 127.02673400572665),
+    new kakao.maps.LatLng(37.49872543597439, 127.02676785815386),
+    new kakao.maps.LatLng(37.49813096097184, 127.02591949495914),
+    new kakao.maps.LatLng(37.497680616783086, 127.02518427952202)                       
+];    
 
 var markerImageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/category.png';  // 마커이미지의 주소입니다. 스프라이트 이미지 입니다
     coffeeMarkers = [], // 커피숍 마커 객체를 가지고 있을 배열입니다
@@ -138,11 +43,11 @@ var markerImageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/c
     carparkMarkers = []; // 주차장 마커 객체를 가지고 있을 배열입니다
 
     
-// createCoffeeMarkers(); // 커피숍 마커를 생성하고 커피숍 마커 배열에 추가합니다
+createCoffeeMarkers(); // 커피숍 마커를 생성하고 커피숍 마커 배열에 추가합니다
 // createStoreMarkers(); // 편의점 마커를 생성하고 편의점 마커 배열에 추가합니다
 // createCarparkMarkers(); // 주차장 마커를 생성하고 주차장 마커 배열에 추가합니다
 
-// 지도에 커피숍 마커가 보이도록 설정합니다    
+changeMarker('coffee'); // 지도에 커피숍 마커가 보이도록 설정합니다    
 
 
 // 마커이미지의 주소와, 크기, 옵션으로 마커 이미지를 생성하여 리턴하는 함수입니다
@@ -162,7 +67,7 @@ function createMarker(position, image) {
 }   
    
 // 커피숍 마커를 생성하고 커피숍 마커 배열에 추가하는 함수입니다
-function createCoffeeMarkers(coffeePositions) {
+function createCoffeeMarkers() {
     
     for (var i = 0; i < coffeePositions.length; i++) {  
         
