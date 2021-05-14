@@ -50,3 +50,7 @@ $(window).resize(function() {
         }
     }
 });
+
+//고정메뉴바높이만큼 모바일메뉴 화면 조정
+var headerHeight = $('#header_wrap').height();
+$('mobile_menu').css('margin-top', headerHeight); 

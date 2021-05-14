@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap');
 /* 
 font-family: 'Itim', cursive;
 font-family: 'Bitter', serif; */
@@ -141,6 +141,12 @@ a {
     color: #f1404b;
 }
 
+/* 컨텐츠 */
+#content_wrap {
+    background: repeating-linear-gradient(#eee, #eee 1px, #fff 0, #fff 20px);
+
+}
+
 
 
 /* 푸터 */
@@ -148,6 +154,17 @@ a {
     width: 100%;
     margin: 10px 0;
     border-bottom: 2px solid #104495;
+    background: repeating-linear-gradient(#eee, #eee 1px, #fff 0, #fff 20px);
+    position: relative;
+}
+
+#footer_wrap > .footer_character {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    right: 5px;
+    bottom: 1px;
+    z-index: 1;
 }
 
 .main_footer {
@@ -167,15 +184,21 @@ a {
 .main_footer > .fnb_wrap > .fnb > li {
     color: #104495;
     text-align: center;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1.1em;
-    /* font-weight: bold; */
+    font-family: 'Caveat', cursive;
+    font-size: 1.3em;
+    font-weight: bold;
     margin-bottom: 5px;
     
 }
 
 .main_footer > .fnb_wrap > .fnb > li > a {
     text-decoration: none;
+    display: block;
+}
+
+.main_footer > .fnb_wrap > .fnb > li > a:hover {
+    border: 2px solid #0E4592;
+    border-radius: 50%;
 }
 
 .main_footer > .fnb_wrap > .fnb .sns {
