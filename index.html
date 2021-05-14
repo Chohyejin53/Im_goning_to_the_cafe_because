@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I'm goning to the Cafe Because,_____</title>
+    <link rel="stylesheet" href="library/jquery.bxslider.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -49,19 +50,15 @@
                     <h3>방문하는 목적에 따라 원하는 카페도 다릅니다.</h3>
                 </div>
                 <div class="img_wrap">
-                    <div class="img img_1">
-                        <img src="images/parallax_img/study_people.jpg" alt="카페에서공부하는사람들">
-                    </div>
-                    <div class="img img_2">
-                        <img src="images/parallax_img/talk_people.jpg" alt="카페에서이야기하는사람들">
-                    </div>
-                    <div class="img img_3">
-                        <img src="images/parallax_img/food.jpg" alt="베이커리">
-                    </div>
+                    <ul class="bxslider">
+                        <li><img src="images/parallax_img/study_people.jpg" alt="카페에서공부하는사람들"></li>
+                        <li><img src="images/parallax_img/talk_people.jpg" alt="카페에서이야기하는사람들"></li>
+                        <li><img src="images/parallax_img/food.jpg" alt="베이커리"></li>
+                    </ul>
                     <div class="txt">
                         <div class="msg txt_1">
                             <h2>공부하러 카페에 가는 사람들은<br>
-                                공간이 넓고 오랫동안 집중있게 있을 수 있는 카페 찾습니다.</h2>
+                                공간이 넓고 오랫동안 집중있게 있을 수 있는 카페를 찾기도 합니다.</h2>
                         </div>
                         <div class="msg txt_2">
                             <h2>친구들을 만나고, 추억을 쌓으러 카페에 가는 사람들은<br>
@@ -72,6 +69,8 @@
                                 디저트가 맛있는 카페를 찾습니다.</h2>
                         </div>
                     </div>
+                </div>
+                    
                 </div>
             
                 <div class="intro_txt ">
@@ -123,6 +122,7 @@
 
 
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="library/jquery.bxslider.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
 </body>
