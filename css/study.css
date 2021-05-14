@@ -91,11 +91,11 @@
 
 .location_info > .list {
     background: #ffe99a;
-    margin: 0 5px;
+    margin: 5px;
 }
 
 .location_info > .list > li {
-    margin: 5px auto;
+    margin: 0 auto;
     width: 90%;
 }
 
@@ -114,6 +114,11 @@
 .location_info > .list > li:first-child {
     border-bottom: 1px solid #104495;
     margin-top: 5px;
+}
+
+.location_info > .list > li:nth-child(2) {
+    font-size: 0.2em;
+    margin-top: 0;
 }
 
 
