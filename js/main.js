@@ -22,18 +22,17 @@ $(window).resize(function() {
 // 윈도우  크기 바뀌면  자동으로 리사이즈 코드 넣기 
 
 //슬라이드
-$(function(){
-    $('.bxSlider').bxSlider({
-        options: fade,
-        minSlides:1,
-        maxSlides:1,
-        slideWidth:400,
-        slideMargin:10,
-        captions:false,
-        moveSlides:0,
-        pager:false,
-        controls:true,
-        autoHover: true,  
-        
-    });
+
+$(document).ready(function(){
+    $('.bxslider').bxSlider(
+    );
+});
+
+$('.bxslider').bxSlider({
+    mode: 'fade',
+    auto: true,
+    autoControls: false,
+    stopAutoOnClick: true,
+    pager: false,
+    slideWidth: 500
 });
