@@ -34,13 +34,22 @@
     margin: 0 auto;
 }
 
+#content_wrap > .main_content > .content_introduce {
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#content_wrap > .main_content > .content_introduce > .intro_txt {
+    /* height: 100px; */
+    margin-bottom: 20px;
+}
+
 #content_wrap > .main_content > .content_introduce > .intro_txt > h3 {
     font-family: 'Nanum Myeongjo', serif;
     font-size: 1.5em;
     font-weight: bold;
     color: #104495;
     text-align: center;
-    
 }
 
 #content_wrap > .main_content > .content_introduce > .intro_txt > p {
@@ -48,26 +57,29 @@
     font-size: 1.2em;
     color: #104495;
     text-align: center;
-    
 }
 
-/*  */
+/* 소개 */
 .img_wrap {
     height: auto;
     margin: 0 auto;
-    overflow: hidden;
-    
+    float: left;
+    width: 500px;
 }
 
 .img_wrap > .bxslider {
-    float: left;
-    width: 48%;
+    width: 500px;
 }
 
-.img_wrap > .txt {
+.content_wrap > .txt {
     float: left;
-    width: 48%;
+    width: 500px;
 }
+
+.content_wrap > .txt > h2 {
+    width: 400px;
+}
+
 /* .animation {
     animation: rint 1s forwards ease-in;
     transition: 2s ease-in-out;

@@ -22,7 +22,6 @@ $(window).resize(function() {
 // 윈도우  크기 바뀌면  자동으로 리사이즈 코드 넣기 
 
 //슬라이드
-
 $(document).ready(function(){
     $('.bxslider').bxSlider(
     );
