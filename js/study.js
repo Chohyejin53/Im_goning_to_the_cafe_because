@@ -21,7 +21,6 @@ ps.keywordSearch('인천 투썸플레이스', placesSearchCB);
 ps.keywordSearch('인천 이디야', placesSearchCB); 
 ps.keywordSearch('인천 할리스', placesSearchCB); 
 
-
 function insertHTML(list, place) {
     
     switch (place) {
@@ -62,11 +61,8 @@ function insertHTML(list, place) {
                 console.log(hollisPosition);
             break;
 
-            
     }
 }
-
-
 
 
 // 키워드 검색 완료 시 호출되는 콜백함수 입니다
@@ -100,7 +96,6 @@ function placesSearchCB (data, status, pagination) {
 
     } 
 }
-
 
 // // 지도에 마커를 표시하는 함수입니다
 // function displayMarker(place) {

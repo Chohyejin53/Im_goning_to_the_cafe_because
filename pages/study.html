@@ -47,10 +47,30 @@
                     <li><span>전화번호</span></li>
                 </ul>
             </div>
-            <div class="maps_wrap">
+            <div id="mapwrap">
                 <div id="map" style="width:600px;height:400px;"></div>
+                <div class="category">
+                    <ul>
+                        <li id="starMenu" onclick="changeMarker('star')">
+                            <span class="ico_comm ico_star"></span>
+                            스타벅스
+                        </li>
+                        <li id="twosomeMenu" onclick="changeMarker('twosome')">
+                            <span class="ico_comm ico_twosome"></span>
+                            투썸플레이스
+                        </li>
+                        <li id="ediyaMenu" onclick="changeMarker('ediya')">
+                            <span class="ico_comm ico_ediya"></span>
+                            이디야
+                        </li>
+                        <li id="hollisMenu" onclick="changeMarker('hollis')">
+                            <span class="ico_comm ico_hollis"></span>
+                            이디야
+                        </li>
+                    </ul>
+                </div>
             </div>
-
+            
         </div>
     </div>
     <div id="footer_wrap">
@@ -90,7 +110,6 @@
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=db59e351dc7a480f1b625120d3f9f2d9&libraries=services"></script>
     <script src="../js/jquery-3.6.0.min.js"></script>
     <!-- js -->
-    <script src="../js/maps.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/study.js"></script>
 </body>

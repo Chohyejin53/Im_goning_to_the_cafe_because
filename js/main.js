@@ -35,3 +35,6 @@ $('.bxslider').bxSlider({
     pager: false,
     slideWidth: 500
 });
+
+
+
