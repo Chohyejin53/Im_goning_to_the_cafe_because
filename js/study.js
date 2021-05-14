@@ -27,50 +27,108 @@ function insertHTML(list, place) {
         case "star": 
                 // console.log("starList: " + JSON.stringify(list));
                 var starPosition = [];
+                var tag = "";
                 for (var i=0; i < list.length; i++) {
                     starPosition.push(new kakao.maps.LatLng(list[i].y, list[i].x));
+                    
+                    var placeName = list[i].place_name;
+                    var categoryName = list[i].category_name;
+                    var addressName = list[i].address_name;
+                    var phoneNum = list[i].phone;
+
+                    tag += '<ul class="list">'
+                    tag += '<li><h3>' + placeName + '</h3></li>'
+                    tag += '<li><span>'  + categoryName + '</span></li>'
+                    tag += '<li><span>' + addressName + '</span></li>'
+                    tag += '<li><span>'+ phoneNum + '</span></li>'
+                    tag += '</ul>'
                 }
                 // console.log(starPosition);
                 console.log(list);
                 createStarMarkers(starPosition);
+            
+                $(".star_info").append(tag);
 
             break;
         case "twosome": 
                 // console.log("twosomeList: " + JSON.stringify(list));
                 var twosomePosition = [];
-                
+                var tag = "";
+
                 for (var i=0; i < list.length; i++) {
                     twosomePosition.push(new kakao.maps.LatLng(list[i].y, list[i].x));
+                
+                    var placeName = list[i].place_name;
+                    var categoryName = list[i].category_name;
+                    var addressName = list[i].address_name;
+                    var phoneNum = list[i].phone;
+
+                    tag += '<ul class="list">'
+                    tag += '<li><h3>' + placeName + '</h3></li>'
+                    tag += '<li><span>'  + categoryName + '</span></li>'
+                    tag += '<li><span>' + addressName + '</span></li>'
+                    tag += '<li><span>'+ phoneNum + '</span></li>'
+                    tag += '</ul>'
                 }
                 // console.log(twosomePosition);
                 createTwosomeMarkers(twosomePosition);
+
+                $(".twosome_info").append(tag);
 
             break;
         case "ediya": 
                 // console.log("ediyaList: " + JSON.stringify(list));
                 var eidyaPosition = [];
-                
+                var tag = "";
+
                 for (var i=0; i < list.length; i++) {
                     eidyaPosition.push(new kakao.maps.LatLng(list[i].y, list[i].x));
+                    
+                    var placeName = list[i].place_name;
+                    var categoryName = list[i].category_name;
+                    var addressName = list[i].address_name;
+                    var phoneNum = list[i].phone;
+
+                    tag += '<ul class="list">'
+                    tag += '<li><h3>' + placeName + '</h3></li>'
+                    tag += '<li><span>'  + categoryName + '</span></li>'
+                    tag += '<li><span>' + addressName + '</span></li>'
+                    tag += '<li><span>'+ phoneNum + '</span></li>'
+                    tag += '</ul>'
                 }
                 // console.log(eidyaPosition);
                 createEdiyaMarkers(eidyaPosition);
-
+                $(".ediya_info").append(tag);
             break;
         case "hollis": 
                 // console.log("hollisList: " + JSON.stringify(list));
                 var hollisPosition = [];
-                
+                var tag = "";
+
                 for (var i=0; i < list.length; i++) {
                     hollisPosition.push(new kakao.maps.LatLng(list[i].y, list[i].x));
+                    
+                    var placeName = list[i].place_name;
+                    var categoryName = list[i].category_name;
+                    var addressName = list[i].address_name;
+                    var phoneNum = list[i].phone;
+
+                    tag += '<ul class="list">'
+                    tag += '<li><h3>' + placeName + '</h3></li>'
+                    tag += '<li><span>'  + categoryName + '</span></li>'
+                    tag += '<li><span>' + addressName + '</span></li>'
+                    tag += '<li><span>'+ phoneNum + '</span></li>'
+                    tag += '</ul>'
                 }
                 // console.log(hollisPosition);
                 createHollisMarkers(hollisPosition);
+                $(".hollis_info").append(tag);
 
             break;
 
     }
 }
+
 
 
 // 키워드 검색 완료 시 호출되는 콜백함수 입니다
@@ -225,6 +283,8 @@ function setHollisMarkers(map) {
     }        
 }
 
+
+
 // 카테고리를 클릭했을 때 type에 따라 카테고리의 스타일과 지도에 표시되는 마커를 변경합니다
 function changeMarker(type){
     
@@ -233,11 +293,17 @@ function changeMarker(type){
     var ediyaMenu = document.getElementById('ediyaMenu');
     var hollisMenu = document.getElementById('hollisMenu');
     
+    var starInfo = document.getElementById('starInfo');
+    var twosomeInfo = document.getElementById('twosomeInfo');
+    var ediyaInfo = document.getElementById('ediyaInfo');
+    var hollisInfo = document.getElementById('hollisInfo');
+
     // 스타벅스 카테고리가 클릭됐을 때
     if (type === 'star') {
     
         // 스타벅스 카테고리를 선택된 스타일로 변경하고
         starMenu.className = 'menu_selected';
+        
         
         //투썸플레이스과 주차장 카테고리는 선택되지 않은 스타일로 바꿉니다
         twosomeMenu.className = '';
@@ -250,7 +316,11 @@ function changeMarker(type){
         setEdiyaMarkers(null);
         setHollisMarkers(null);
         
-        
+        //목록 표출
+        starInfo.style.display = "block";
+        twosomeInfo.style.display = "none";
+        ediyaInfo.style.display = "none";
+        hollisInfo.style.display = "none";
 
     } else if (type === 'twosome') { //투썸플레이스 카테고리가 클릭됐을 때
     
@@ -265,6 +335,12 @@ function changeMarker(type){
         setTwosomeMarkers(map);
         setEdiyaMarkers(null);
         setHollisMarkers(null);
+
+        //목록 표출
+        starInfo.style.display = "none";
+        twosomeInfo.style.display = "block";
+        ediyaInfo.style.display = "none";
+        hollisInfo.style.display = "none";
         
     }  else if (type === 'ediya') { //이디야 카테고리가 클릭됐을 때
     
@@ -280,6 +356,11 @@ function changeMarker(type){
         setEdiyaMarkers(map);
         setHollisMarkers(null);
         
+        //목록 표출
+        starInfo.style.display = "none";
+        twosomeInfo.style.display = "none";
+        ediyaInfo.style.display = "block";
+        hollisInfo.style.display = "none";
     }
     else if (type === 'hollis') { //할리스 카테고리가 클릭됐을 때
     
@@ -295,5 +376,13 @@ function changeMarker(type){
         setEdiyaMarkers(null);
         setHollisMarkers(map);
         
+        //목록 표출
+        starInfo.style.display = "none";
+        twosomeInfo.style.display = "none";
+        ediyaInfo.style.display = "none";
+        hollisInfo.style.display = "block";
+        
     }
-} 
+
+    
+};
