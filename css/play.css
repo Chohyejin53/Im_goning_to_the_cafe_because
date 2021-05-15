@@ -1,0 +1,68 @@
+@charset "UTF-8";
+@import url(reset.css); 
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+/* 컨텐츠 */
+#content_wrap {
+    width: 100%;
+}
+
+#content_wrap > .main_content {
+    width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+.main_content > #mapwrap {
+    float: left;
+    width: 50%;
+    margin: 30px auto;
+}
+
+/* 지도설명 */
+.main_content > .info_wap {
+    float: left;
+    margin: 20px auto;
+    overflow:auto; 
+    width: 40%;
+    height: 700px;
+}
+
+.info_wrap > .locatrion_info {
+    margin-top: 20px;
+}
+
+.location_info > .list {
+    background: #ffe99a;
+    margin: 5px;
+}
+
+.location_info > .list > li {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.location_info > .list > li > h3 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4em;
+    color: #104495;
+}
+
+.location_info > .list > li > span {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.1em;
+    color: #104495;
+}
+
+.location_info > .list > li:first-child {
+    border-bottom: 1px solid #104495;
+    margin-top: 5px;
+}
+
+.location_info > .list > li:nth-child(2) {
+    font-size: 0.2em;
+    margin-top: 0;
+}

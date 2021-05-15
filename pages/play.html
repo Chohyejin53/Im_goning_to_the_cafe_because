@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I'm goning to the Cafe Because, to play</title>
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/study.css">
+    <link rel="stylesheet" href="../css/play.css">
 
 </head>
 <body>
@@ -39,19 +39,25 @@
     </div>
     <div id="content_wrap">
         <div class="main_content">
-            <div class="location_info">
-                <ul class="list">
-                    <li><h3>카페이름</h3></li>
-                    <li><span>도로명주소</span></li>
-                    <li><span>지번</span></li>
-                    <li><span>전화번호</span></li>
-                </ul>
-            </div>
-            <div class="maps_wrap">
+            <div id="mapwrap">
                 <div id="map" style="width:600px;height:400px;"></div>
             </div>
-
-        </div>
+            <div class="info_wap">
+                <div class="location_info star_info" id="starInfo" >
+                    <!-- <ul class="list">
+                        <li><h3>카페이름</h3></li>
+                        <li><span>카테고리</span></li>
+                        <li><span>주소</span></li>
+                        <li><span>전화번호</span></li>
+                    </ul> -->
+                </div>
+                <div class="location_info twosome_info" id="twosomeInfo">
+                </div>
+                <div class="location_info ediya_info" id="ediyaInfo">
+                </div>
+                <div class="location_info hollis_info" id="hollisInfo">
+                </div>
+            </div>
     </div>
     <div id="footer_wrap">
         <div class="main_footer">
@@ -90,7 +96,6 @@
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=db59e351dc7a480f1b625120d3f9f2d9&libraries=services"></script>
     <script src="../js/jquery-3.6.0.min.js"></script>
     <!-- js -->
-    <script src="../js/maps.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/play.js"></script>
 </body>
