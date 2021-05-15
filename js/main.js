@@ -33,7 +33,8 @@ $('.bxslider').bxSlider({
     autoControls: false,
     stopAutoOnClick: true,
     pager: false,
-    slideWidth: 500
+    speed:1000,
+    slideWidth: 400
 });
 
 

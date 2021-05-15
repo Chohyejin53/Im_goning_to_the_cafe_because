@@ -35,12 +35,13 @@
 }
 
 #content_wrap > .main_content > .content_introduce {
-    margin: 20px auto;
-    overflow: hidden;
+    margin: 10px auto;
+    height: auto;
 }
 
 #content_wrap > .main_content > .content_introduce > .intro_txt {
-    /* height: 100px; */
+    height: 70px;
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 
@@ -57,28 +58,50 @@
     font-size: 1.2em;
     color: #104495;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 /* 소개 */
-.img_wrap {
-    height: auto;
+
+/* 슬라이드 */
+.content_introduce > .slider_wrap {
+    overflow: hidden;
+}
+
+.slider_wrap > .img_wrap {
     margin: 0 auto;
     float: left;
-    width: 500px;
+    width: 40%;
+    height: 300px;
 }
 
-.img_wrap > .bxslider {
-    width: 500px;
+
+.slider_wrap > .img_wrap > .bxslider {
+    margin: 0 auto;
 }
 
-.content_wrap > .txt {
+/* 슬라이드 설명부분 */
+.slider_wrap >  .txt {
     float: left;
-    width: 500px;
+    width: 55%;
+    margin: 10px;
+    margin-top: 150px;
 }
 
-.content_wrap > .txt > h2 {
-    width: 400px;
+.slider_wrap >  .txt > .msg {
+    margin: 10px;
+    margin-bottom: 40px;
 }
+
+.slider_wrap > .txt > .msg > h2 {
+    margin: 20px auto;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.3em;
+    color: #104495;
+    text-align: left;
+}
+
+
 
 /* .animation {
     animation: rint 1s forwards ease-in;
