@@ -28,6 +28,13 @@
     transform: translate(-50%, -50%);
 }
 
+#content_wrap > .gradient_box_1 {
+    width: 100%;
+    height: 200px;
+    background: rgb(255,198,0);
+    background: linear-gradient(0deg, rgba(255,198,0,0) 0%, rgba(255,198,0,1) 100%);
+
+}
 
 #content_wrap > .main_content {
     width: 1024px;
@@ -35,29 +42,38 @@
 }
 
 #content_wrap > .main_content > .content_introduce {
-    margin: 10px auto;
+    margin: 0 auto;
     height: auto;
 }
 
-#content_wrap > .main_content > .content_introduce > .intro_txt {
-    height: 70px;
-    margin-top: 50px;
-    margin-bottom: 20px;
+#content_wrap > .main_content > .content_introduce > .intro_txt_wrap {
+    height: 300px;
+    position: relative;
 }
 
-#content_wrap > .main_content > .content_introduce > .intro_txt > h3 {
+#content_wrap > .main_content > .content_introduce > .intro_txt_wrap > .intro_txt {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#content_wrap > .main_content > .content_introduce > .intro_txt_wrap  > .intro_txt > h3 {
     font-family: 'Nanum Myeongjo', serif;
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 1.8em;
+    font-weight: bolder;
     color: #104495;
     text-align: center;
+    margin-bottom: 10px;
 }
 
-#content_wrap > .main_content > .content_introduce > .intro_txt > p {
+#content_wrap > .main_content > .content_introduce > .intro_txt_wrap  > .intro_txt > p {
     font-family: 'Nanum Myeongjo', serif;
     font-size: 1.2em;
     color: #104495;
     text-align: center;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -65,35 +81,33 @@
 
 /* 슬라이드 */
 .content_introduce > .slider_wrap {
+    margin: 0 auto;
     overflow: hidden;
+    position: relative;
 }
 
 .slider_wrap > .img_wrap {
-    margin: 0 auto;
     float: left;
-    width: 40%;
-    height: 300px;
+    width: 45%;
 }
 
-
-.slider_wrap > .img_wrap > .bxslider {
-    margin: 0 auto;
-}
 
 /* 슬라이드 설명부분 */
-.slider_wrap >  .txt {
+.slider_wrap >  .txt_wrap {
     float: left;
-    width: 55%;
-    margin: 10px;
-    margin-top: 150px;
+    width: 50%;
 }
 
-.slider_wrap >  .txt > .msg {
+.slider_wrap > .txt_wrap > .txt {
+    width: 100%;
+}
+
+.slider_wrap > .txt_wrap > .txt > .msg {
     margin: 10px;
     margin-bottom: 40px;
 }
 
-.slider_wrap > .txt > .msg > h2 {
+.slider_wrap > .txt_wrap > .txt > .msg > h2 {
     margin: 20px auto;
     font-family: 'Nanum Myeongjo', serif;
     font-size: 1.3em;
@@ -119,13 +133,134 @@ to {
 
 /* 미디어쿼리 */
 @media screen and (max-width: 767px) {
+    /* 메인비주얼 */
+    #content_wrap > .main_visual > .visual_img {
+        width: 98vw;
+    }
+
+    /* 메인컨텐츠 */
+    #content_wrap > .main_content {
+        width: 90vw;
+    }
+
+    #content_wrap > .main_content > .content_introduce > .intro_txt_wrap {
+        height: 50vh;
+    }
+
+    .main_content > .content_introduce > .intro_txt_wrap  > .intro_txt > h3 {
+        word-break:keep-all;
+        font-size: 1.4em;
+    }
+
+    .main_content > .content_introduce > .intro_txt_wrap  > .intro_txt > p {
+        word-break:keep-all;
+        font-size: 1.1em;
+    }
+
+    /* 슬라이드 */
+    .content_introduce > .slider_wrap {
+        overflow: none;
+    }
+
+    .slider_wrap > .img_wrap {
+        float: none;
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .slider_wrap > .img_wrap > img {
+        margin: 0 auto;
+    }
+
+    /* 슬라이드 설명부분 */
+    .slider_wrap >  .txt_wrap {
+        float: none;
+        width: 90vw;
+        height: auto;
+    }
+    .slider_wrap > .txt_wrap > .txt {
+        width: 90vw;
+    }
+
+    .slider_wrap > .txt_wrap > .txt > .msg > h2 {
+        width: 100%;
+        word-break:keep-all;
+        font-size: 1.2em;
+    }
 
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    
+    /* 메인비주얼 */
+    #content_wrap > .main_visual > .visual_img {
+        width: 98vw;
+    }
+
+    /* 메인컨텐츠 */
+    #content_wrap > .main_content {
+        width: 90vw;
+    }
+
+    .main_content > .content_introduce > .intro_txt_wrap  > .intro_txt > h3 {
+        word-break:keep-all;
+    }
+
+    .main_content > .content_introduce > .intro_txt_wrap  > .intro_txt > p {
+        word-break:keep-all;
+    }
+
+    /* 슬라이드 */
+    .content_introduce > .slider_wrap {
+        overflow: none;
+    }
+
+    .slider_wrap > .img_wrap {
+        float: none;
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .slider_wrap > .img_wrap > img {
+        margin: 0 auto;
+    }
+
+    /* 슬라이드 설명부분 */
+    .slider_wrap >  .txt_wrap {
+        float: none;
+        width: 90vw;
+        height: auto;
+    }
+    .slider_wrap > .txt_wrap > .txt {
+        width: 90vw;
+    }
+
+    .slider_wrap > .txt_wrap > .txt > .msg > h2 {
+        width: 100%;
+        word-break:keep-all;
+    }
 }
     
 @media screen and (min-width: 1024px) {
-    
+    /* 메인비주얼 */
+    #content_wrap > .main_visual > .visual_img {
+        width: 1024px;
+    }
+
+    /* 슬라이드 설명부분 */
+    .slider_wrap >  .txt_wrap {
+        position: relative;
+        height: 400px;
+    }
+
+    .slider_wrap > .txt_wrap > .txt {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .slider_wrap > .txt_wrap > .txt > .msg > h2 {
+        text-align: left;
+    }
 }
