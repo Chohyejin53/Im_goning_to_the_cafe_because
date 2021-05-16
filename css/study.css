@@ -46,7 +46,7 @@
     width:200px;
     height:90px;
     z-index:10;
-    border:1px solid #104495;
+    border:1px solid #0a2858;
     font-family: 'Noto Sans KR', sans-serif;
     font-size:12px;
     text-align:center;
@@ -111,7 +111,7 @@
 .location_info > .list > li > span {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.1em;
-    color: #104495;
+    color: #0a2858;
 }
 
 .location_info > .list > li:first-child {
