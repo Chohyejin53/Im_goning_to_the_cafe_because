@@ -24,7 +24,7 @@
 
 .main_content > .option p {
         margin:10px 0;
-        width: 200px;
+
 }  
 
 .main_content #keyword {
@@ -36,7 +36,7 @@
 
 .main_content .option input {
         font-family: 'Hi Melody', cursive;
-        font-size : 200%;
+        font-size : 2em;
         font-weight: bolder;
         color: #104495;
         text-align: center;
@@ -50,7 +50,7 @@ input:hover, textarea:hover { /* 마우스 올라 올 때 */
 
 input[type=text]:focus, input[type=email]:focus { /* 포커스 받을 때 */
         font-family: 'Hi Melody', cursive;
-        font-size : 200%;
+        font-size : 2em;
         font-weight: bolder;
         color: #f1404b;
 }
@@ -77,6 +77,7 @@ input[type=text]:focus, input[type=email]:focus { /* 포커스 받을 때 */
 .map_wrap a, .map_wrap a:hover, .map_wrap a:active { 
         color:#000;
         text-decoration: none;
+        
 }
 .map_wrap {
         position:relative;
@@ -216,15 +217,81 @@ input[type=text]:focus, input[type=email]:focus { /* 포커스 받을 때 */
 }
 
 
-
 /* 미디어쿼리 */
 @media screen and (max-width: 767px) {
+        #content_wrap > .main_content {
+                width: 90vw;
+        }
 
+        /* 검색창 */
+        .main_content > .option { 
+                width: 90vw;
+        }
+        .main_content #keyword { 
+                width: calc(400px - 50%);
+                height: 40px;
+        }
 
+        .main_content .option input {
+                font-size : 1.8em;
+        }
+        input[type=text]:focus, input[type=email]:focus { 
+                font-size : 1.8em;
+        }
+        .main_content > .option button {
+                height: 45px;
+        }
+
+        /* 카카오 지도 스타일 */
+        .map_wrap { 
+                width: 90vw;
+        }
+        /* 리스트목록 */
+        #menu_wrap { 
+                width: 90vw;
+        }
+
+        #placesList .item .info { 
+                word-break:keep-all;
+        }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+        #content_wrap > .main_content {
+                width: 90vw;
+        }
 
+        /* 검색창 */
+        .main_content > .option { 
+                width: 90vw;
+        }
+        .main_content #keyword { 
+                width: calc(700px - 10%);
+                height: 40px;
+        }
+
+        .main_content .option input {
+                font-size : 1.8em;
+        }
+        input[type=text]:focus, input[type=email]:focus { 
+                font-size : 1.8em;
+        }
+        .main_content > .option button {
+                height: 45px;
+        }
+
+        /* 카카오 지도 스타일 */
+        .map_wrap { 
+                width: 90vw;
+        }
+        /* 리스트목록 */
+        #menu_wrap { 
+                width: 90vw;
+        }
+
+        #placesList .item .info { 
+                word-break:keep-all;
+        }
 }
 
 @media screen and (min-width: 1024px) {

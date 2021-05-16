@@ -40,7 +40,7 @@ function insertHTML(list, place) {
                     tag += '<li><h3>' + placeName + '</h3></li>'
                     tag += '<li><span>'  + categoryName + '</span></li>'
                     tag += '<li><span>' + addressName + '</span></li>'
-                    tag += '<li><span>'+ phoneNum + '</span></li>'
+                    tag += '<li><span class="tel">'+ phoneNum + '</span></li>'
                     tag += '</ul>'
                 }
                 // console.log(starPosition);
