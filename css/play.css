@@ -15,11 +15,21 @@
     overflow: hidden;
 }
 
-
+/* 지도 */
 .main_content > #mapwrap {
     float: left;
     width: 50%;
-    margin: 30px auto;
+    margin: 20px auto;
+}
+
+#mapwrap { 
+    /* position:relative; */
+    overflow:hidden;
+}
+
+#mapwrap > #map {
+    width: 600px;
+    height: 700px;
 }
 
 /* 지도설명 */
