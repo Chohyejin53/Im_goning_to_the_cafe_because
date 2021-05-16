@@ -228,7 +228,7 @@ input[type=text]:focus, input[type=email]:focus { /* 포커스 받을 때 */
                 width: 90vw;
         }
         .main_content #keyword { 
-                width: calc(400px - 50%);
+                width: calc(90% - 50px);
                 height: 40px;
         }
 
