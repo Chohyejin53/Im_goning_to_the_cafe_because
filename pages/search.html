@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>search</title>
     <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/search.css">
 
 </head>
 <body>
@@ -38,8 +39,24 @@
     </div>
     <div id="content_wrap">
         <div class="main_content">
-        
+            <div class="map_wrap">
+                <div id="menu_wrap" class="bg_white">
+                    <div class="option">
+                        <div>
+                            <form onsubmit="searchPlaces(); return false;">
+                                Search : <input type="text" value="인천 보드게임카페" id="keyword" size="15"> 
+                                <button type="submit"><img src="../images/search.svg" alt="검색"></button> 
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <ul id="placesList"></ul>
+                    <div id="pagination"></div>
+                </div>
+                <div id="map"></div>
+            </div>
         </div>
+
     </div>
     <div id="footer_wrap">
         <div class="main_footer">
@@ -77,8 +94,12 @@
     </div>
 
 
-
+    <!-- 라이브러리 -->
     <script src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=db59e351dc7a480f1b625120d3f9f2d9&libraries=services"></script>
+    
+    <!-- JS -->
     <script src="../js/common.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 </html>
