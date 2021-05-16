@@ -59,13 +59,13 @@
 .location_info > .list > li > h3 {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.4em;
-    color: #0a2858;
+    color: #104495;
 }
 
 .location_info > .list > li > span {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.1em;
-    color: #104495;
+    color: #0a2858;
 }
 
 .location_info > .list > li:first-child {
@@ -74,7 +74,7 @@
 }
 
 .location_info > .list > li:nth-child(2) {
-    font-size: 4px;
+    font-size: 8px;
     margin-top: 0;
 }
 

@@ -105,7 +105,7 @@
 .location_info > .list > li > h3 {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.4em;
-    color: #0a2858;
+    color: #104495;
 }
 
 .location_info > .list > li > span {
@@ -115,12 +115,11 @@
 }
 
 .location_info > .list > li:first-child {
-    border-bottom: 1px solid #0a2858;
+    border-bottom: 1px solid #104495;
     margin-top: 5px;
 }
 
 .location_info > .list > li:nth-child(2) {
-    color: #104495;
     font-size: 8px;
     margin-top: 0;
 }
