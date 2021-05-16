@@ -30,7 +30,7 @@
 .main_content #keyword {
         width: 700px;
         height: 50px;
-        border: 3px solid #0E4592;
+        border: 3px solid #104495;
         border-radius: 0.5em 0em 0em 0.5em;
 }
 
@@ -45,7 +45,6 @@
 
 input:hover, textarea:hover { /* 마우스 올라 올 때 */
         background : white;
-        /* border: 3px solid #0E4592; */
         border-radius: 0.5em 0em 0em 0.5em;   
 }
 
@@ -59,13 +58,13 @@ input[type=text]:focus, input[type=email]:focus { /* 포커스 받을 때 */
 .main_content > .option button { 
         width: 50px;
         height: 56px;
-        background: #0E4592;
-        border: 3px solid #0E4592;
+        background: #104495;
+        border: 3px solid #104495;
         border-radius: 0em 0.5em 0.5em 0em ;
 }
 
 .main_content > .option button > img {
-        width: 20px;
+        width: 25px;
 }
 
 /* 카카오 지도 스타일 */
@@ -115,7 +114,7 @@ input[type=text]:focus, input[type=email]:focus { /* 포커스 받을 때 */
         display: block; 
         height: 1px;
         border: 0; 
-        border-top: 2px solid #0E4592;
+        border-top: 2px solid #104495;
         margin:3px 0;
 }
 
@@ -125,7 +124,7 @@ input[type=text]:focus, input[type=email]:focus { /* 포커스 받을 때 */
 
 #placesList .item {
         position:relative;
-        border-bottom:1px solid #0E4592;
+        border-bottom:1px solid #104495;
         overflow: hidden;
         cursor: pointer;
         min-height: 65px;
@@ -151,10 +150,16 @@ input[type=text]:focus, input[type=email]:focus { /* 포커스 받을 때 */
 }
 
 #placesList .item .info > h5 {
-        width: 20%;
         font-family: 'Noto Sans KR', sans-serif;
         font-size: 1.2em;
         font-weight: bold;
+        color: #0a2858;
+}
+
+#placesList .item .info > span:first-of-type {
+        font-family: 'Noto Sans KR', sans-serif;
+        color: #0a2858;
+        line-height: 10px;
 }
 
 #placesList .info .gray {
