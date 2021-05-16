@@ -120,7 +120,8 @@
 }
 
 .location_info > .list > li:nth-child(2) {
-    font-size: 4px;
+    color: #8a8a8a;
+    font-size: 8px;
     margin-top: 0;
 }
 
