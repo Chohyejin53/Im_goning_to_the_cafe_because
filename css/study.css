@@ -115,12 +115,12 @@
 }
 
 .location_info > .list > li:first-child {
-    border-bottom: 1px solid #104495;
+    border-bottom: 1px solid #0a2858;
     margin-top: 5px;
 }
 
 .location_info > .list > li:nth-child(2) {
-    color: #8a8a8a;
+    color: #104495;
     font-size: 8px;
     margin-top: 0;
 }
