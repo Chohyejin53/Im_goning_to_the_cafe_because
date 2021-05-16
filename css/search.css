@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @import url(reset.css); 
 /* 폰트 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
 
 /* 컨텐츠 */
 #content_wrap {
@@ -15,6 +15,85 @@
         overflow: hidden;
 }
 
+/* 검색창 */
+.main_content > .option { 
+        width: 100%;
+        margin: 50px auto;
+        text-align: center;
+}
+
+.main_content > .option p {
+        margin:10px 0;
+        width: 200px;
+}  
+
+.main_content #keyword {
+        width: 700px;
+        height: 50px;
+        border: 3px solid #0E4592;
+        border-radius: 0.5em 0em 0em 0.5em;
+}
+
+.main_content .option input {
+        font-family: 'Hi Melody', cursive;
+        font-size : 200%;
+        font-weight: bolder;
+        color: #104495;
+        text-align: center;
+        vertical-align:middle;
+}
+
+input:hover, textarea:hover { /* 마우스 올라 올 때 */
+        background : white;
+        /* border: 3px solid #0E4592; */
+        border-radius: 0.5em 0em 0em 0.5em;   
+}
+
+input[type=text]:focus, input[type=email]:focus { /* 포커스 받을 때 */
+        font-family: 'Hi Melody', cursive;
+        font-size : 200%;
+        font-weight: bolder;
+        color: #f1404b;
+}
+
+.main_content > .option button { 
+        width: 50px;
+        height: 56px;
+        background: #0E4592;
+        border: 3px solid #0E4592;
+        border-radius: 0em 0.5em 0.5em 0em ;
+}
+
+.main_content > .option button > img {
+        width: 20px;
+}
+
+/* 카카오 지도 스타일 */
+.map_wrap, .map_wrap * {
+        margin:0;
+        padding:0;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size:12px;
+}
+.map_wrap a, .map_wrap a:hover, .map_wrap a:active { 
+        color:#000;
+        text-decoration: none;
+}
+.map_wrap {
+        position:relative;
+        width:100%;
+        height:400px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+}
+
+.map_wrap > #map {
+        width:100%;
+        height:100%;
+        position:relative;
+        overflow:hidden;
+} 
+
 /* 리스트목록 */
 #menu_wrap { 
         width:100%;
@@ -24,7 +103,7 @@
         overflow-y:auto;
         background:rgba(255, 255, 255, 0.7);
         z-index: 1;
-        font-size:12px;
+        font-size:1.1em;
         border-radius: 10px;
 }
 
@@ -36,24 +115,8 @@
         display: block; 
         height: 1px;
         border: 0; 
-        border-top: 2px solid #5F5F5F;
+        border-top: 2px solid #0E4592;
         margin:3px 0;
-}
-
-#menu_wrap .option { 
-        text-align: center;
-}
-
-#menu_wrap .option p {
-        margin:10px 0;
-}  
-
-#menu_wrap .option button { 
-        margin-left:5px;
-}
-
-#menu_wrap .option button > img {
-        width: 20px;
 }
 
 #placesList li {
@@ -62,7 +125,7 @@
 
 #placesList .item {
         position:relative;
-        border-bottom:1px solid #888;
+        border-bottom:1px solid #0E4592;
         overflow: hidden;
         cursor: pointer;
         min-height: 65px;
@@ -83,6 +146,17 @@
         padding:10px 0 10px 55px;
 }
 
+#placesList .item .info:hover { 
+        background: #ffe99a;
+}
+
+#placesList .item .info > h5 {
+        width: 20%;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.2em;
+        font-weight: bold;
+}
+
 #placesList .info .gray {
         color:#8a8a8a;
 }
@@ -93,7 +167,7 @@
 }
 
 #placesList .info .tel {
-        color:#009900;
+        color:#5F5F5F;
 }
 
 #placesList .item .markerbg {
@@ -122,7 +196,9 @@
 
 #pagination {
         margin:10px auto;
+        font-family: 'Noto Sans KR', sans-serif;
         text-align: center;
+        color: #104495;
 }
 #pagination a {
         display:inline-block;
@@ -131,32 +207,21 @@
 #pagination .on {
         font-weight: bold; 
         cursor: default;
-        color:#777;
+        color: #f1404b;
 }
 
-/* 카카오 지도 스타일 */
-.map_wrap, .map_wrap * {
-        margin:0;
-        padding:0;
-        font-family: 'Noto Sans KR', sans-serif;
-        font-size:12px;
-}
-.map_wrap a, .map_wrap a:hover, .map_wrap a:active { 
-        color:#000;
-        text-decoration: none;
-}
-.map_wrap {
-        position:relative;
-        width:100%;
-        height:500px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+
+
+/* 미디어쿼리 */
+@media screen and (max-width: 767px) {
+
+
 }
 
-.map_wrap > #map {
-        width:100%;
-        height:100%;
-        position:relative;
-        overflow:hidden;
-} 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 
+}
+
+@media screen and (min-width: 1024px) {
+
+}

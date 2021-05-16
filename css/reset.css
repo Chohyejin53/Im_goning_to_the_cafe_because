@@ -14,3 +14,9 @@ a:hover{text-decoration:underline}
 margin:-1px;width:1px;height:1px}
 html{overflow-y:scroll}
 input[type="button"], button{cursor: pointer;}
+
+input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}

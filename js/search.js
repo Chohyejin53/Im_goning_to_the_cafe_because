@@ -8,8 +8,8 @@ var goodPlaceList = [];
 
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = {
-        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
+        center: new kakao.maps.LatLng(37.469221, 126.603234), // 지도의 중심좌표
+        level: 2 // 지도의 확대 레벨
     };  
 
 // 지도를 생성합니다    
@@ -99,6 +99,7 @@ function displayPlaces(places) {
         (function(marker, title) {
             kakao.maps.event.addListener(marker, 'mouseover', function() {
                 displayInfowindow(marker, title);
+                
             });
 
             kakao.maps.event.addListener(marker, 'mouseout', function() {
@@ -140,8 +141,8 @@ function getListItem(index, places) {
     } else {
         itemStr += '    <span>' +  places.address_name  + '</span>'; 
     }
-                 
-      itemStr += '  <span class="tel">' + places.phone  + '</span>' +
+        
+        itemStr += '  <span class="tel">' + places.phone  + '</span>' +
                 '</div>';           
 
     el.innerHTML = itemStr;
