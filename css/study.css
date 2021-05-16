@@ -19,7 +19,7 @@
 .main_content > #mapwrap {
     float: left;
     width: 50%;
-    margin: 30px auto;
+    margin: 20px auto;
 }
 
 #mapwrap { 
@@ -29,7 +29,7 @@
 
 #mapwrap > #map {
     width: 600px;
-    height: 690px;
+    height: 700px;
 }
 
 .category, .category * {
@@ -95,7 +95,7 @@
 
 .location_info > .list {
     background: #ffe99a;
-    margin: 5px;
+    margin: 0px 5px;
 }
 
 .location_info > .list > li {
@@ -191,8 +191,6 @@
         float: left;
         width: 48%;
         height: 85px;
-        background: #ffe99a;
-        margin: 5px;
     }
 }
 
