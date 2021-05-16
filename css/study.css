@@ -72,7 +72,7 @@
     margin:0 auto 2px;
     width:36px;
     height:54px;
-    background:url('../images/css_sprites.png') no-repeat;
+    background:url('../images/marker/css_sprites.png') no-repeat;
 } 
 .category .ico_star { background-position: -10px -10px; }  
 .category .ico_twosome { background-position: -10px -84px; }   

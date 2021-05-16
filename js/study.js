@@ -154,7 +154,7 @@ function placesSearchCB (data, status, pagination) {
 }
 
 
-var markerImageSrc = '../images/css_sprites.png';  // 마커이미지의 주소입니다. 스프라이트 이미지 입니다
+var markerImageSrc = '../images/marker/css_sprites.png';  // 마커이미지의 주소입니다. 스프라이트 이미지 입니다
     starMarkers = [], // 스타벅스 마커 객체를 가지고 있을 배열입니다
     twosomeMarkers = [], //투썸플레이스 마커 객체를 가지고 있을 배열입니다
     ediyaMarkers = []; // 이디야 마커 객체를 가지고 있을 배열입니다
