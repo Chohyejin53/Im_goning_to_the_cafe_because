@@ -106,6 +106,7 @@ div::-webkit-scrollbar {
     background:rgba(255, 255, 255, 0.7);
     border-bottom:1px solid #104495;
     margin: 0px 10px;
+    height: 85px;
 }
 
 .location_info > .list:hover {
@@ -121,6 +122,7 @@ div::-webkit-scrollbar {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.4em;
     color: #104495;
+    padding-top: 5px;
 }
 
 .location_info > .list > li > span {
@@ -129,9 +131,6 @@ div::-webkit-scrollbar {
     color: #0a2858;
 }
 
-.location_info > .list > li:first-child {
-    margin-top: 5px;
-}
 
 .location_info > .list > li:nth-child(2) {
     font-size: 8px;
