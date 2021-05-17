@@ -39,7 +39,7 @@
             // map.setBounds(bounds);
     
             // 완료후 맛집 리스트 표출(json을 text개체로)
-            console.log(cafeList);
+            // console.log(cafeList);
             tag = "";
             for (var i=0; i < cafeList.length; i++) {
                 var placeName = cafeList[i].place_name;

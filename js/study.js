@@ -44,7 +44,7 @@ function insertHTML(list, place) {
                     tag += '</ul>'
                 }
                 // console.log(starPosition);
-                console.log(list);
+                // console.log(list);
                 createStarMarkers(starPosition);
             
                 $(".star_info").append(tag);
