@@ -21,12 +21,44 @@
     position: relative;
 }
 
-#content_wrap > .main_visual > .visual_img > img {
+#content_wrap > .main_visual > .visual_img > svg {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.cls-1{
+    fill:none;
+    stroke:#104495;
+    stroke-miterlimit:10;
+    stroke-width:0.7px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 500;
+    animation: dash 15s linear alternate forwards;
+}
+
+.cls-2{
+    fill:none;
+    stroke:#104495;
+    stroke-miterlimit:10;
+    stroke-width:0.89px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 500;
+    animation: dash 15s linear alternate forwards;
+    }
+
+    @keyframes dash {
+        from {
+            stroke-dashoffset: 1000;
+            fill: #ffc600;
+        }
+        to {
+            stroke-dashoffset: 500; 
+            fill: #104495;
+        }
+}
+
 
 #content_wrap > .gradient_box_1 {
     width: 100%;
