@@ -60,7 +60,7 @@ div::-webkit-scrollbar {
     font-family: 'Noto Sans KR', sans-serif;
     font-size:12px;
     text-align:center;
-    /* background-color:#fff; */
+    background-color:#fff;
 }
 
 .category .menu_selected {
