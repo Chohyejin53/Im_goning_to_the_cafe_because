@@ -48,8 +48,7 @@ function placesSearchCB(data, status, pagination) {
         // 페이지 번호를 표출합니다
         displayPagination(pagination);
 
-        // 완료후 맛집 리스트 표출(json을 text개체로)
-        console.log("맛집 리스트: " + JSON.stringify(goodPlaceList));
+        // 완료후 리스트 표출
 
     } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
 
