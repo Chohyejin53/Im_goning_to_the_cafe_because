@@ -4,6 +4,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
 
+/* IE */
+div {
+    -ms-overflow-style: none; 
+}
+
+  /* chrome etc */
+div::-webkit-scrollbar { 
+    display: none !important; 
+}
+
 /* 컨텐츠 */
 #content_wrap {
     width: 100%;
