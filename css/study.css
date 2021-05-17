@@ -60,13 +60,12 @@ div::-webkit-scrollbar {
     font-family: 'Noto Sans KR', sans-serif;
     font-size:12px;
     text-align:center;
-    background-color:#fff;
+    /* background-color:#fff; */
 }
 
 .category .menu_selected {
     background:#FF5F4A;
     color:#fff;
-    border-left:1px solid #FF5F4A;
     border-right:1px solid #FF5F4A;
     margin:0 -1px;} 
 .category li {
@@ -132,7 +131,7 @@ div::-webkit-scrollbar {
 }
 
 
-.location_info > .list > li:nth-child(2) {
+.location_info > .list > li:nth-of-type(2) {
     font-size: 8px;
     margin-top: 0;
 }
