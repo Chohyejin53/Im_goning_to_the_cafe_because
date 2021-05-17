@@ -180,9 +180,6 @@
     }
 
     /* 슬라이드 */
-    .content_introduce > .slider_wrap {
-        overflow: none;
-    }
 
     .slider_wrap > .img_wrap {
         float: none;
@@ -235,9 +232,6 @@
     }
 
     /* 슬라이드 */
-    .content_introduce > .slider_wrap {
-        overflow: none;
-    }
 
     .slider_wrap > .img_wrap {
         float: none;
